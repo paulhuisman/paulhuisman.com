@@ -87,10 +87,15 @@ float:left;display:block; width:18px; height:19px;margin:3px; background:url('..
 
   /* Footer */
   .footer-wrapper {
-    float:left; height:21px; width:100%; background: #000; opacity:0.7;
+    float:left; height:21px; width:100%; background: #000; opacity:0.7; font-size:11px;
     position:fixed; box-shadow: 17px -60px 75px -35px #1F1F1F inset; margin-top:-45px; z-index:20000; bottom:0; z-index:1;
     color:#eee; text-align:center;
     padding:3px 0 0 0;
+
+  }
+  .footer-wrapper a {
+      color:#eee;
+    }
   }
 
 
