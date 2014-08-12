@@ -95,7 +95,10 @@ float:left;display:block; width:18px; height:19px;margin:3px; background:url('..
   }
   .footer-wrapper a {
       color:#eee;
-    }
+      text-decoration: none;
+  }
+  .footer-wrapper a:hover {
+      text-decoration: underline;
   }
 
 
