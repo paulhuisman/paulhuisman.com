@@ -7,13 +7,14 @@ $(document).ready(function(){
     transition_speed: 1100,
     slide_links: 'blank',
     slides :[
-      {image : 'work/doel.jpg', proj_id : '1'},
-      {image : 'work/berlin.jpg', proj_id : '2'},
-      {image : 'work/loveland-light.jpg', proj_id : '3'},
-      {image : 'work/australia.jpg', proj_id : '4'},
-      {image : 'work/thailand.jpg', proj_id : '5'},
-      {image : 'work/indonesia.jpg', proj_id : '6'},
-      {image : 'work/thailand2.jpg', proj_id : '7'},
+      {image : 'work/zakynthos-boats.jpg', proj_id : '1'},
+      {image : 'work/doel.jpg', proj_id : '2'},
+      {image : 'work/berlin.jpg', proj_id : '3'},
+      {image : 'work/loveland-light.jpg', proj_id : '4'},
+      {image : 'work/australia.jpg', proj_id : '5'},
+      {image : 'work/thailand.jpg', proj_id : '6'},
+      {image : 'work/indonesia.jpg', proj_id : '7'},
+      {image : 'work/thailand2.jpg', proj_id : '8'},
     ]
   });
 
