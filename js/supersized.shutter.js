@@ -207,11 +207,12 @@
     ----------------------------*/
     playToggle : function(state){
 
-      if (state =='play'){
+      if (state =='play') {
         // If image, swap to pause
         if ($(vars.play_button).attr('src')) $(vars.play_button).attr("src", vars.image_path + "pause.png");
         if (api.options.progress_bar && !vars.is_paused) theme.progressBar();
-      }else if (state == 'pause'){
+      }
+      else if (state == 'pause'){
         // If image, swap to play
         if ($(vars.play_button).attr('src')) $(vars.play_button).attr("src", vars.image_path + "play.png");
             if (api.options.progress_bar && vars.is_paused)$(vars.progress_bar).stop().css({left : -$(window).width()});
@@ -223,7 +224,7 @@
     /* Before Slide Transition
     ----------------------------*/
     beforeAnimation : function(direction){
-        if (api.options.progress_bar && !vars.is_paused) $(vars.progress_bar).stop().css({left : -$(window).width()});
+      if (api.options.progress_bar && !vars.is_paused) $(vars.progress_bar).stop().css({left : -$(window).width()});
 
         /* Update Fields
         ----------------------------*/
@@ -231,11 +232,11 @@
         if ($(vars.slide_caption).length){
           (api.getField('title')) ? $(vars.slide_caption).html(api.getField('title')) : $(vars.slide_caption).html('');
         }
-        // Update slide number
-      if (vars.slide_current.length){
-          $(vars.slide_current).html(vars.current_slide + 1);
-      }
 
+        // Update slide number
+        if (vars.slide_current.length){
+            $(vars.slide_current).html(vars.current_slide + 1);
+        }
 
         // Highlight current thumbnail and adjust row position
         if (api.options.thumb_links){
@@ -270,8 +271,6 @@
 
 
       }
-                  var url = "index_items.php";
-                 $('.slides').load(url,{slide: projID});
 
 
     },
@@ -280,8 +279,8 @@
     /* After Slide Transition
     ----------------------------*/
     afterAnimation : function(){
-                $('slides').fadeOut();
-    if (api.options.progress_bar && !vars.is_paused) theme.progressBar(); //  Start progress bar
+      $('slides').fadeOut();
+      if (api.options.progress_bar && !vars.is_paused) theme.progressBar(); //  Start progress bar
     },
 
 
@@ -290,7 +289,6 @@
     progressBar : function(){
         //$(vars.progress_bar).stop().css({left : -$(window).width()}).animate({ left:0 }, api.options.slide_interval);
       }
-
 
    };
 
