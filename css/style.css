@@ -69,7 +69,7 @@ a {cursor:pointer; }
 .media .media_slides .backstretch {float:left; min-height:100%; min-width:100%; position:absolute; left:0; top:0; display:block; }
 
 
-  #mob-wrapper{display:none!important;}
+#mob-wrapper{display:none!important;}
 .content {float:left;width:100%; padding-bottom: 45px; height:100%;}
 #art_lover_container {float:left;width:100%; padding-bottom: 45px; height:100%; }
 
@@ -91,6 +91,18 @@ a {cursor:pointer; }
     text-decoration: underline;
 }
 
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  .footer-wrapper {
+    height: 91px;
+    font-size: 22px;
+    padding:12px 0 6px 0 ;
+
+  }
+}
 
 
 .content {float:left;width:100%; padding-bottom: 90px; height:100%;}
@@ -141,12 +153,12 @@ input[type='submit']:hover{background-position: 0px -32px;}
 .nav_balk li a.next_button {background-position:-62px 0px;width:27px;height:26px;}
 
 @media screen and (max-width: 960px) {
-    #mob-wrapper{display:none!important;}
-#controls-wrapper { margin:0 auto; height:42px; width:100%; bottom:100px; left:0; z-index:4000;  position:fixed; }
+  #mob-wrapper{display:none!important;}
+  #controls-wrapper { margin:0 auto; height:42px; width:100%; bottom:100px; left:0; z-index:4000;  position:fixed; }
 }
 @media screen and (min-width: 960px) {
-    .wrapper-mob{display: none;}
-#controls-wrapper { margin:0 auto; height:42px; width:100%; bottom:55px; left:0; z-index:4000;  position:fixed; }
+  .wrapper-mob{display: none;}
+  #controls-wrapper { margin:0 auto; height:42px; width:100%; bottom:55px; left:0; z-index:4000;  position:fixed; }
 }
 
 #controls { overflow:hidden; height:100%; position:relative; text-align:left; z-index:5; }
@@ -159,5 +171,5 @@ input[type='submit']:hover{background-position: 0px -32px;}
 
 ul#slide-list{ padding:15px 0; float:left; position:absolute; left:50%; }
 ul#slide-list li{ list-style:none; width:18px; height:19px; float:left;margin:5px; }
-ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background-position:0 0px; }
+ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background-position:0 0px; }../index.html
 ul#slide-list li a:hover{ background-position:0 -19px; cursor:pointer; }
