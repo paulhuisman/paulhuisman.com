@@ -18,7 +18,9 @@ $(document).ready(function(){
     ]
   });
 
-  $('a#email_me').click(function(){
+  $('a#email_me').click(function() {
+    var _gaq = _gaq || [];
+    _gaq.push(['_trackEvent', 'Outside link', 'E-mail']);
     document.location = 'mailto:paulhuisman88@gmail.com';
     return false;
   })
