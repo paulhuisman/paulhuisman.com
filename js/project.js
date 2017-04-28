@@ -7,6 +7,8 @@ $(document).ready(function(){
     transition_speed: 1100,
     slide_links: 'blank',
     slides :[
+      {image : 'work/tdp1.jpg'},
+      {image : 'work/valpa.jpg'},
       {image : 'work/zakynthos-boats.jpg'},
       {image : 'work/berlin.jpg'},
       {image : 'work/loveland-light.jpg'},
