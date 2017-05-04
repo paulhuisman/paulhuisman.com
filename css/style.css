@@ -77,10 +77,10 @@ a {cursor:pointer; }
 
 /* Footer */
 .footer-wrapper {
-  float:left; height:21px; width:100%; background: #000; opacity:0.7; font-size:11px;
+  float:left; height:26px; width:100%; background: #000; opacity:0.7; font-size:11px;
   position:fixed; box-shadow: 17px -60px 75px -35px #1F1F1F inset; margin-top:-45px; z-index:20000; bottom:0; z-index:1;
   color:#eee; text-align:center;
-  padding:3px 0 0 0;
+  padding:7px 0 0 0;
 
 }
 .footer-wrapper a {
@@ -125,7 +125,7 @@ a {cursor:pointer; }
 
 
 /* Footer */
-.footer-wrapper {float:left; height:24px; width:100%; background: #000; position:relative; box-shadow: 17px -60px 75px -35px #1F1F1F inset; margin-top:-90px; z-index:20000;}
+.footer-wrapper {float:left;  width:100%; background: #000; position:relative; box-shadow: 17px -60px 75px -35px #1F1F1F inset; margin-top:-90px; z-index:20000;}
 .footer-wrapper .menu {float:left; height:45px; width:100%;}
 .footer-wrapper .menu .bottom_menu{float:left; list-style: none; width:100%;}
 .footer-wrapper .menu .bottom_menu li {float:left; text-align:center;  width:16%; }
