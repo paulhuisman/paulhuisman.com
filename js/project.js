@@ -26,7 +26,12 @@ $(document).ready(function(){
     return false;
   })
 
-  $('.story-text').delay(300).animate({"top": '50%',"opacity": "1"}, 1000);
+  $(".slide-0 img")
+    .on('load', function() {
+      $('.story-text').delay(300).animate({"top": '50%',"opacity": "1"}, 1000);
+    })
+  ;
+
 
   calcResolution();
 
