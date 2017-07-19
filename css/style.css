@@ -55,11 +55,12 @@ a {
 .story-text {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
 }
 
 /* ------------------------------ WRAPPERS ------------------------------ */
