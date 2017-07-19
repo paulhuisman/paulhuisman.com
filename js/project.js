@@ -7,12 +7,12 @@ $(document).ready(function(){
     transition_speed: 1100,
     slide_links: 'blank',
     slides :[
+      {image : 'work/australia.jpg'},
       {image : 'work/tdp3.jpg'},
       {image : 'work/tdp1.jpg'},
       {image : 'work/valpa.jpg'},
       {image : 'work/isla.jpg'},
       {image : 'work/zakynthos-boats.jpg'},
-      {image : 'work/australia.jpg'},
       {image : 'work/thailand.jpg'},
       {image : 'work/indonesia.jpg'},
       {image : 'work/thailand2.jpg'},
