@@ -11,6 +11,7 @@ $(document).ready(function(){
     slides :[
       {image : 'work/australia.jpg'},
       {image : 'work/tdp3.jpg'},
+      {image : 'work/argentina1.jpg'},
       {image : 'work/tdp1.jpg'},
       {image : 'work/valpa.jpg'},
       {image : 'work/isla.jpg'},
@@ -33,7 +34,6 @@ $(document).ready(function(){
       $('.story-text').delay(300).animate({"top": '50%',"opacity": "1"}, 1000);
     })
   ;
-
 
   calcResolution();
 
