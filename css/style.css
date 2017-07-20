@@ -95,6 +95,9 @@ a {
 .top-wrapper a:hover {
     text-decoration: underline;
 }
+.top-wrapper .slogan {
+  opacity: 0.9;
+}
 
 @media only screen
   and (min-device-width: 320px)
