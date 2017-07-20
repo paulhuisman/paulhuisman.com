@@ -45,7 +45,6 @@ window.onload = function() {
   var elements = document.getElementsByClassName('typewrite');
 
   // INJECT CSS
-  console.log('Period', period);
   var css = document.createElement("style");
   css.type = "text/css";
   css.innerHTML = ".typewrite > .wrap { padding-right: 10ppx; border-right: 0.06em solid #fff}";

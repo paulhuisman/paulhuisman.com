@@ -27,13 +27,18 @@ $(document).ready(function(){
     _gaq.push(['_trackEvent', 'Outside link', 'E-mail']);
     document.location = 'mailto:paulhuisman88@gmail.com';
     return false;
-  })
+  });
 
-  $(".slide-0 img")
-    .on('load', function() {
+  if($(".slide-0 img").length > 0 ) {
+    $(".slide-0 img").on('load', function() {
       $('.story-text').delay(300).animate({"top": '50%',"opacity": "1"}, 1000);
-    })
-  ;
+    });
+  }
+  else {
+    setTimeout(function() {
+      $('.story-text').animate({"top": '50%',"opacity": "1"}, 1000);
+    }, 300);
+  }
 
   calcResolution();
 
