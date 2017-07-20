@@ -2,9 +2,11 @@ $(document).ready(function(){
   $.supersized({
     fit_landscape: 0,
     autoplay: 1,
+    random: 1,
     performance: 1,
     transition: 1,
     transition_speed: 1100,
+    slide_interval: 6000,
     slide_links: 'blank',
     slides :[
       {image : 'work/australia.jpg'},
