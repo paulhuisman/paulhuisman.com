@@ -15,7 +15,9 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   margin-top: 20px;
   font-size: 151px;
   font-family: 'Anton', sans-serif;
@@ -38,6 +40,15 @@ h2 {
   font-size: 53px;
   line-height: 120%;
 }
+h3 {
+  font-size: 44px;
+  line-height: 120%;
+}
+h4 {
+  font-size: 34px;
+  line-height: 120%;
+}
+
 .paul,
 .home-icon {
   position:absolute;
@@ -49,6 +60,15 @@ h2 {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   background: #fff url('../images/paul-250.jpg') no-repeat;
+  background-size: 100px 100px;
+  box-shadow:1px 1px 2px rgba(66, 66, 66, .8);
+  -webkit-box-shadow: 1px 1px 2px rgba(66, 66, 66, .8);
+  -moz-box-shadow: 1px 1px 2px rgba(66, 66, 66, .8);
+}
+.paul-photo img {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px; 
   background-size: 100px 100px;
   box-shadow:1px 1px 2px rgba(66, 66, 66, .8);
   -webkit-box-shadow: 1px 1px 2px rgba(66, 66, 66, .8);
@@ -79,6 +99,27 @@ h2 {
 .subtitel a {
   color:inherit !important;
 }
+
+.about h2 {
+  margin-top: 40px;
+}
+.project-row.last {
+  margin-bottom: 6em;
+}
+.project-row.first {
+  margin-top: 6em;
+}
+.project-row {
+  margin-top: 2em;
+}
+.project-row a {
+  color: #fff;
+}
+.project-row .project-info {
+  font-style: italic;
+  color: #eaeaea;
+}
+
 /* ------------------------------ WRAPPERS ------------------------------ */
 
 #mob-wrapper{display:none!important;}
@@ -128,9 +169,22 @@ h2 {
     max-width: 80%;
     margin: 20px auto;
   }
+  h3 {
+    max-width: 80%;
+    margin: 20px auto;
+  }
   .top-wrapper {
     font-size: 24px;
     height: 40px;
     padding: 20px 0 0 0;
+  }
+  .paul,
+  .home-icon {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 140px;
+    height: 140px;
+    background-size: 140px 140px;
   }
 }
