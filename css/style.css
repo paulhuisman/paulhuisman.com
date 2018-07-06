@@ -178,6 +178,19 @@ h4 {
     height: 40px;
     padding: 20px 0 0 0;
   }
+  .about h2 {
+    font-size: 48px;
+  }
+  .about .project-row h3 {
+    font-size: 55px;
+    margin-bottom: 5px;
+  }
+  .about .project-info {
+    font-size: 14px;
+  }
+  .about h4 {
+    font-size: 30px;
+  }
   .paul,
   .home-icon {
     position: absolute;
