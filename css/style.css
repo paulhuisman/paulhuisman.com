@@ -201,3 +201,26 @@ h4 {
     background-size: 140px 140px;
   }
 }
+
+@media only screen
+  and (min-device-width: 480px)
+  and (max-device-width: 1024px) {
+    .story-text {
+      text-align: center;
+      width: 100%;
+    }
+    h2 {
+      max-width: 80%;
+      margin: 20px auto;
+    }
+    h3 {
+      max-width: 80%;
+      margin: 20px auto;
+    }
+    h1 {
+      font-size: 110px;
+    }
+    h2 {
+      font-size: 44px;
+    }
+}
