@@ -235,11 +235,22 @@ h4 {
   and (min-device-width: 1025px)
   and (max-device-width: 1366px) {
     h1 {
-      font-size: 110px;
+      font-size: 100px;
     }
     h2 {
       margin: 10px auto;
       margin-top: 20px;
       font-size: 40px;
+    }
+}
+@media only screen
+  and (min-device-width: 1367px)
+  and (max-device-width: 1740px) { 
+    h1 {
+      font-size: 130px;
+    }
+    h2 {
+      margin: 20px auto;
+      font-size: 44px;
     }
 }
