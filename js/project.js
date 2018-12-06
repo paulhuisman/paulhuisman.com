@@ -1,28 +1,25 @@
 $(document).ready(function(){
-  if($('.slides').length) {
-    $.supersized({
-      fit_landscape: 0,
-      autoplay: 1,
-      random: 1,
-      performance: 1,
-      transition: 1,
-      transition_speed: 1100,
-      slide_interval: 6000,
-      slide_links: 'blank',
-      slides :[
-        {image : 'work/australia.jpg'},
-        {image : 'work/tdp3.jpg'},
-        {image : 'work/argentina1.jpg'},
-        {image : 'work/tdp1.jpg'},
-        {image : 'work/valpa.jpg'},
-        {image : 'work/isla.jpg'},
-        {image : 'work/zakynthos-boats.jpg'},
-        {image : 'work/thailand.jpg'},
-        {image : 'work/indonesia.jpg'},
-        {image : 'work/thailand2.jpg'},
-      ]
-    });
-  }
+  $.supersized({
+    fit_landscape: 0,
+    autoplay: 1,
+    performance: 1,
+    transition: 1,
+    transition_speed: 1100,
+    slide_links: 'blank',
+    slides :[
+      {image : 'work/tdp1.jpg'},
+      {image : 'work/manaslu1.jpg'},
+      {image : 'work/valpa.jpg'},
+      {image : 'work/zakynthos-boats.jpg'},
+      //{image : 'work/berlin.jpg'},
+      // {image : 'work/loveland-light.jpg'},
+      {image : 'work/australia.jpg'},
+      // {image : 'work/thailand.jpg'},
+      // {image : 'work/doel.jpg'},
+      {image : 'work/indonesia.jpg'},
+      //{image : 'work/thailand2.jpg'},
+    ]
+  });
 
   $('a#email_me').click(function() {
     var _gaq = _gaq || [];
