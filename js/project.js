@@ -9,6 +9,7 @@ $(document).ready(function(){
     slides :[
       {image : 'work/tdp1.jpg'},
       {image : 'work/manaslu1.jpg'},
+      {image : 'work/manaslu2.jpg'},
       {image : 'work/valpa.jpg'},
       {image : 'work/zakynthos-boats.jpg'},
       //{image : 'work/berlin.jpg'},
