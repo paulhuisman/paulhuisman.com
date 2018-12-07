@@ -3,17 +3,18 @@ $(document).ready(function(){
     fit_landscape: 0,
     autoplay: 1,
     performance: 1,
+    random: 1,
     transition: 1,
     transition_speed: 1100,
     slide_links: 'blank',
     slides :[
       {image : 'work/manaslu1.jpg'},
       {image : 'work/tdp1.jpg'},
+      {image : 'work/tdp2.jpg'},
       {image : 'work/manaslu2.jpg'},
       {image : 'work/valpa.jpg'},
       {image : 'work/zakynthos-boats.jpg'},
       {image : 'work/australia.jpg'},
-      {image : 'work/indonesia.jpg'}
     ]
   });
 
