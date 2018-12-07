@@ -13,7 +13,7 @@ $(document).ready(function(){
       {image : 'work/valpa.jpg'},
       {image : 'work/zakynthos-boats.jpg'},
       {image : 'work/australia.jpg'},
-      {image : 'work/indonesia.jpg'},
+      {image : 'work/indonesia.jpg'}
     ]
   });
 
