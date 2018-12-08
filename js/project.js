@@ -12,6 +12,7 @@ $(document).ready(function(){
       {image : 'work/tdp1.jpg'},
       {image : 'work/tdp2.jpg'},
       {image : 'work/manaslu2.jpg'},
+      {image : 'work/manaslu3.jpg'},
       {image : 'work/valpa.jpg'},
       {image : 'work/zakynthos-boats.jpg'},
       {image : 'work/australia.jpg'},
