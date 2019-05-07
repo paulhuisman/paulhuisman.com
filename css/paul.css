@@ -5850,6 +5850,23 @@ body {
   100% {
     opacity: 1; } }
 
+.blinking-circle {
+  animation: blinkingCircle ease-in 5s infinite; }
+
+@keyframes blinkingCircle {
+  0% {
+    opacity: 0; }
+  49% {
+    opacity: 0.99; }
+  50% {
+    opacity: 1; }
+  51% {
+    opacity: 0.99; }
+  99% {
+    opacity: 0.01; }
+  100% {
+    opacity: 0; } }
+
 .close {
   display: none;
   position: absolute;
