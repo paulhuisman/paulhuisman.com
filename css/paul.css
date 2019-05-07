@@ -5339,12 +5339,7 @@ body {
       font-family: 'fugue';
       display: table-cell;
       letter-spacing: 0.05em;
-      padding: 25px 2px 5px 3px;
-      font-size: 0.8rem;
-      min-height: 170px; }
-      .experience-overlay-block .cv-list-small li:first-child {
-        min-height: 200px;
-        padding-top: 40px; }
+      font-size: 0.8rem; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
           min-height: auto;
@@ -5361,7 +5356,7 @@ body {
         border-radius: 50%;
         display: inline-block;
         padding: 0;
-        margin-top: 12px; }
+        margin-top: 10px; }
         @media screen and (min-width: 769px), print {
           .experience-overlay-block .cv-list-small li .yellow-circle {
             margin-top: 21px;
