@@ -5676,7 +5676,7 @@ body {
       margin-bottom: 14rem; } }
 
 .projects h2 {
-  font-size: 4.3rem;
+  font-size: 4.1rem;
   line-height: 84px;
   letter-spacing: 0.05em;
   margin-bottom: 3.5rem; }
@@ -5690,7 +5690,7 @@ body {
       margin-right: 0; } }
 
 .more h2 {
-  font-size: 4.3rem;
+  font-size: 4.1rem;
   line-height: 84px;
   letter-spacing: 0.05em;
   margin-bottom: 3.5rem; }
@@ -5756,7 +5756,7 @@ body {
 
 .footer .column.grey-bg {
   color: rgba(21, 21, 22, 0.4);
-  padding: 4rem;
+  padding: 2rem 3rem;
   padding-left: 16.25vw; }
   @media screen and (min-width: 769px), print {
     .footer .column.grey-bg {
