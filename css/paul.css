@@ -5341,7 +5341,7 @@ body {
       letter-spacing: 0.05em;
       padding: 45px 1px 5px 1px;
       font-size: 0.8rem;
-      min-height: 140px; }
+      min-height: 160px; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
           min-height: auto;
