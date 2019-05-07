@@ -5339,7 +5339,9 @@ body {
       font-family: 'fugue';
       display: table-cell;
       letter-spacing: 0.05em;
-      font-size: 0.8rem; }
+      padding: 20px 2px 5px 3px;
+      font-size: 0.8rem;
+      min-height: 200px; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
           min-height: auto;
