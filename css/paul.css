@@ -5341,7 +5341,7 @@ body {
       letter-spacing: 0.05em;
       padding: 20px 2px 5px 3px;
       font-size: 0.8rem;
-      min-height: 200px; }
+      min-height: 180px; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
           min-height: auto;
@@ -5358,10 +5358,12 @@ body {
         border-radius: 50%;
         display: inline-block;
         padding: 0;
-        margin-top: 10px; }
+        margin-top: 10px;
+        margin-left: 3px; }
         @media screen and (min-width: 769px), print {
           .experience-overlay-block .cv-list-small li .yellow-circle {
             margin-top: 21px;
+            margin-left: 0;
             height: 22px;
             width: 22px; } }
 
