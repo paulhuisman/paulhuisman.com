@@ -5339,7 +5339,7 @@ body {
       font-family: 'fugue';
       display: table-cell;
       letter-spacing: 0.05em;
-      padding: 20px 2px 5px 3px;
+      padding: 20px 2px 5px 2px;
       font-size: 0.8rem;
       min-height: 180px; }
       @media screen and (min-width: 769px), print {
