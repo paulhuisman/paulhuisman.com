@@ -2,3 +2,5 @@ node_modules
 sass
 package.json
 package-lock.json
+.DS_Store
+assets/.DS_Store
