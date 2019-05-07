@@ -5405,7 +5405,10 @@ body {
     .cv-list-big .cv-list-item .h4 {
       font-size: 1.2rem;
       font-family: 'fugue';
-      margin-bottom: 1.6rem; }
+      margin-bottom: 1.6rem;
+      line-height: 1.2rem; }
+      .cv-list-big .cv-list-item .h4 span {
+        font-size: 0.8rem; }
     .cv-list-big .cv-list-item p {
       color: #777;
       font-style: italic;
