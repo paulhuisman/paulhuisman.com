@@ -5339,7 +5339,7 @@ body {
       font-family: 'fugue';
       display: table-cell;
       letter-spacing: 0.05em;
-      padding: 25px 2px 5px 2px;
+      padding: 25px 2px 5px 3px;
       font-size: 0.8rem;
       min-height: 170px; }
       .experience-overlay-block .cv-list-small li:first-child {
