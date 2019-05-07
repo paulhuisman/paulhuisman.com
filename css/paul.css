@@ -5338,9 +5338,8 @@ body {
     .experience-overlay-block .cv-list-small li {
       font-family: 'fugue';
       display: table-cell;
-      margin: 1rem 1rem;
       letter-spacing: 0.05em;
-      padding: 35px 1px 5px 0px;
+      padding: 35px 1px 5px 1px;
       font-size: 0.8rem; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
@@ -5348,7 +5347,7 @@ body {
           font-size: 1rem; } }
       @media screen and (min-width: 1088px) {
         .experience-overlay-block .cv-list-small li {
-          padding: 6vh 2.6vh;
+          padding: 6vh 2.7vh;
           font-size: 1.2rem; } }
       .experience-overlay-block .cv-list-small li .yellow-circle {
         height: 16px;
