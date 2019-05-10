@@ -9,3 +9,7 @@ function hide_cv_bar() {
   var list_small = document.getElementsByClassName('cv-list-small');
   list_small[0].style.display = 'block';
 }
+
+function send_email() {
+  window.location.href = "mailto:paulhuisman88@example.com";
+}
