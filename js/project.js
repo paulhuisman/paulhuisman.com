@@ -11,5 +11,5 @@ function hide_cv_bar() {
 }
 
 function send_email() {
-  window.location.href = "mailto:paulhuisman88@example.com";
+  window.location.href = "mailto:paulhuisman88@gmail.com";
 }
