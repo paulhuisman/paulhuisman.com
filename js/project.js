@@ -1,15 +1,19 @@
-function hide_cv_bar() {
-  // tmp solution
-  var block = document.getElementsByClassName('experience-overlay-block');
-  block[0].style.width = '8.333vw';
-  var close = document.getElementsByClassName('close');
-  close[0].style.display = 'none';
-  var list_big = document.getElementsByClassName('cv-list-big');
-  list_big[0].style.display = 'none';
-  var list_small = document.getElementsByClassName('cv-list-small');
-  list_small[0].style.display = 'block';
+// Add no touch class
+if (!("ontouchstart" in document.documentElement)) {
+  document.documentElement.className += "no-touch";
 }
 
-function send_email() {
+var el = document.querySelector('.experience-overlay-block');
+el.onclick = function() {
+  el.classList.toggle('experience-overlay-block-toggled-active');
+}
+
+var close = document.querySelector('.close-overlay');
+close.onclick = function() {
+  el.classList.remove('experience-overlay-block-toggled-active');
+}
+
+var send_mail = document.querySelector('.send-email');
+send_mail.onclick = function() {
   window.location.href = "mailto:paulhuisman88@gmail.com";
 }

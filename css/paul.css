@@ -5342,6 +5342,8 @@ body {
       padding: 20px 2px 5px 2px;
       font-size: 0.8rem;
       min-height: 180px; }
+      .experience-overlay-block .cv-list-small li:last-child {
+        min-height: 330px; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
           min-height: auto;
@@ -5420,36 +5422,29 @@ body {
       font-size: 1.1rem;
       margin-bottom: 1rem; }
 
-.experience-overlay-block:hover,
-.experience-overlay-block:active,
-.experience-overlay-block.expanded {
+.no-touch .experience-overlay-block:hover,
+.experience-overlay-block-toggled-active {
   width: 83.33vw;
   overflow: visible; }
   @media screen and (min-width: 769px), print {
-    .experience-overlay-block:hover,
-    .experience-overlay-block:active,
-    .experience-overlay-block.expanded {
+    .no-touch .experience-overlay-block:hover,
+    .experience-overlay-block-toggled-active {
       width: 41.6666vw; } }
   @media screen and (min-width: 1088px) {
-    .experience-overlay-block:hover,
-    .experience-overlay-block:active,
-    .experience-overlay-block.expanded {
+    .no-touch .experience-overlay-block:hover,
+    .experience-overlay-block-toggled-active {
       width: 33.3333vw; } }
-  .experience-overlay-block:hover .cv-list-small,
-  .experience-overlay-block:active .cv-list-small,
-  .experience-overlay-block.expanded .cv-list-small {
+  .no-touch .experience-overlay-block:hover .cv-list-small,
+  .experience-overlay-block-toggled-active .cv-list-small {
     display: none; }
-  .experience-overlay-block:hover .white-side-block,
-  .experience-overlay-block:hover .cv-list-big,
-  .experience-overlay-block:active .white-side-block,
-  .experience-overlay-block:active .cv-list-big,
-  .experience-overlay-block.expanded .white-side-block,
-  .experience-overlay-block.expanded .cv-list-big {
+  .no-touch .experience-overlay-block:hover .white-side-block,
+  .no-touch .experience-overlay-block:hover .cv-list-big,
+  .experience-overlay-block-toggled-active .white-side-block,
+  .experience-overlay-block-toggled-active .cv-list-big {
     display: block; }
   @media screen and (max-width: 768px) {
-    .experience-overlay-block:hover .close,
-    .experience-overlay-block:active .close,
-    .experience-overlay-block.expanded .close {
+    .no-touch .experience-overlay-block:hover .close-overlay,
+    .experience-overlay-block-toggled-active .close-overlay {
       display: block; } }
 
 .experience-overlay-block:hover + header .h1 {
@@ -5877,7 +5872,7 @@ body {
   100% {
     opacity: 0; } }
 
-.close {
+.close-overlay {
   display: none;
   position: absolute;
   right: 22px;
@@ -5886,10 +5881,10 @@ body {
   height: 25px;
   cursor: pointer; }
 
-.close:hover {
+.close-overlay:hover {
   opacity: 1; }
 
-.close:before, .close:after {
+.close-overlay:before, .close-overlay:after {
   position: absolute;
   left: 15px;
   content: ' ';
@@ -5897,8 +5892,8 @@ body {
   width: 2px;
   background-color: #d2d3d6; }
 
-.close:before {
+.close-overlay:before {
   transform: rotate(45deg); }
 
-.close:after {
+.close-overlay:after {
   transform: rotate(-45deg); }
