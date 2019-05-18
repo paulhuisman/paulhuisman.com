@@ -5308,6 +5308,16 @@ body {
   text-align: right;
   letter-spacing: 0.05em; }
 
+.opacity-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); }
+
 .experience-overlay-block {
   background-color: #151516;
   position: absolute;
@@ -5451,9 +5461,13 @@ body {
   background: transparent !important;
   width: auto; }
 
-.no-touch .experience-overlay-block:hover + .header .logo-bar,
-.experience-overlay-block-toggled-active + .header .logo-bar {
+.no-touch .experience-overlay-block:hover + header .logo-bar,
+.experience-overlay-block-toggled-active + header .logo-bar {
   background-color: #efdb25; }
+
+.no-touch .experience-overlay-block:hover + header .opacity-overlay,
+.experience-overlay-block-toggled-active + header .opacity-overlay {
+  display: block; }
 
 .header .column {
   min-height: 66.666vw; }
