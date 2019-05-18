@@ -5592,6 +5592,12 @@ body {
     @media screen and (min-width: 769px), print {
       .get-in-touch ul li a {
         font-size: 1rem; } }
+    @media screen and (min-width: 1088px) {
+      .get-in-touch ul li a {
+        font-size: 1.1rem; } }
+    @media screen and (min-width: 1472px) {
+      .get-in-touch ul li a {
+        font-size: 1.2rem; } }
     .get-in-touch ul li a:hover {
       color: #666;
       border-bottom: 2px solid #666; }
@@ -5651,6 +5657,15 @@ body {
       text-align: right;
       margin-top: 0.3rem;
       font-family: "fugue"; }
+      @media screen and (min-width: 769px), print {
+        .subheader .experience-block .content ul li {
+          font-size: 1rem; } }
+      @media screen and (min-width: 1088px) {
+        .subheader .experience-block .content ul li {
+          font-size: 1.1rem; } }
+      @media screen and (min-width: 1472px) {
+        .subheader .experience-block .content ul li {
+          font-size: 1.2rem; } }
 
 .about .columns > .columns .is-7:first-child {
   padding-right: 2rem; }
