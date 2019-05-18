@@ -5447,12 +5447,14 @@ body {
     .experience-overlay-block-toggled-active .close-overlay {
       display: block; } }
 
-.experience-overlay-block:hover + header .h1 {
+.no-touch .experience-overlay-block:hover + header .h1,
+.experience-overlay-block-toggled-active + header .h1 {
   z-index: 1001;
   background: transparent !important;
   width: auto; }
 
-.experience-overlay-block:hover + .header .logo-bar {
+.no-touch .experience-overlay-block:hover + .header .logo-bar,
+.experience-overlay-block-toggled-active + .header .logo-bar {
   background-color: #efdb25; }
 
 .header .column {
