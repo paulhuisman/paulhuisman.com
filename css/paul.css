@@ -687,10 +687,10 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   background-color: #4a4a4a !important; }
 
 .has-text-grey {
-  color: #7a7a7a !important; }
+  color: #666 !important; }
 
 .has-background-grey {
-  background-color: #7a7a7a !important; }
+  background-color: #666 !important; }
 
 .has-text-grey-light {
   color: #b5b5b5 !important; }
@@ -2910,7 +2910,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .button.is-static {
     background-color: whitesmoke;
     border-color: #dbdbdb;
-    color: #7a7a7a;
+    color: #666;
     box-shadow: none;
     pointer-events: none; }
   .button.is-rounded {
@@ -3028,31 +3028,31 @@ a.has-text-danger:hover, a.has-text-danger:focus {
     background-color: whitesmoke;
     border-color: whitesmoke;
     box-shadow: none;
-    color: #7a7a7a; }
+    color: #666; }
     .input[disabled]::-moz-placeholder,
     fieldset[disabled] .input::-moz-placeholder,
     .textarea[disabled]::-moz-placeholder,
     fieldset[disabled]
     .textarea::-moz-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(102, 102, 102, 0.3); }
     .input[disabled]::-webkit-input-placeholder,
     fieldset[disabled] .input::-webkit-input-placeholder,
     .textarea[disabled]::-webkit-input-placeholder,
     fieldset[disabled]
     .textarea::-webkit-input-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(102, 102, 102, 0.3); }
     .input[disabled]:-moz-placeholder,
     fieldset[disabled] .input:-moz-placeholder,
     .textarea[disabled]:-moz-placeholder,
     fieldset[disabled]
     .textarea:-moz-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(102, 102, 102, 0.3); }
     .input[disabled]:-ms-input-placeholder,
     fieldset[disabled] .input:-ms-input-placeholder,
     .textarea[disabled]:-ms-input-placeholder,
     fieldset[disabled]
     .textarea:-ms-input-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(102, 102, 102, 0.3); }
   .input[readonly],
   .textarea[readonly] {
     box-shadow: none; }
@@ -3208,7 +3208,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .radio[disabled],
   fieldset[disabled]
   .radio {
-    color: #7a7a7a;
+    color: #666;
     cursor: not-allowed; }
 
 .radio + .radio {
@@ -3255,19 +3255,19 @@ a.has-text-danger:hover, a.has-text-danger:focus {
       background-color: whitesmoke;
       border-color: whitesmoke;
       box-shadow: none;
-      color: #7a7a7a; }
+      color: #666; }
       .select select[disabled]::-moz-placeholder,
       fieldset[disabled] .select select::-moz-placeholder {
-        color: rgba(122, 122, 122, 0.3); }
+        color: rgba(102, 102, 102, 0.3); }
       .select select[disabled]::-webkit-input-placeholder,
       fieldset[disabled] .select select::-webkit-input-placeholder {
-        color: rgba(122, 122, 122, 0.3); }
+        color: rgba(102, 102, 102, 0.3); }
       .select select[disabled]:-moz-placeholder,
       fieldset[disabled] .select select:-moz-placeholder {
-        color: rgba(122, 122, 122, 0.3); }
+        color: rgba(102, 102, 102, 0.3); }
       .select select[disabled]:-ms-input-placeholder,
       fieldset[disabled] .select select:-ms-input-placeholder {
-        color: rgba(122, 122, 122, 0.3); }
+        color: rgba(102, 102, 102, 0.3); }
     .select select::-ms-expand {
       display: none; }
     .select select[disabled]:hover,
@@ -3370,7 +3370,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .select.is-large {
     font-size: 1.5rem; }
   .select.is-disabled::after {
-    border-color: #7a7a7a; }
+    border-color: #666; }
   .select.is-fullwidth {
     width: 100%; }
     .select.is-fullwidth select {
@@ -3851,7 +3851,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .control.has-icons-left .input:focus ~ .icon,
   .control.has-icons-left .select:focus ~ .icon, .control.has-icons-right .input:focus ~ .icon,
   .control.has-icons-right .select:focus ~ .icon {
-    color: #7a7a7a; }
+    color: #666; }
   .control.has-icons-left .input.is-small ~ .icon,
   .control.has-icons-left .select.is-small ~ .icon, .control.has-icons-right .input.is-small ~ .icon,
   .control.has-icons-right .select.is-small ~ .icon {
@@ -5566,6 +5566,9 @@ body {
     @media screen and (min-width: 769px), print {
       .get-in-touch ul li a {
         font-size: 1rem; } }
+    .get-in-touch ul li a:hover {
+      color: #666;
+      border-bottom: 2px solid #666; }
 
 .subheader {
   margin-left: 16.25vw; }
@@ -5800,6 +5803,8 @@ body {
       font-family: 'fugue';
       border-bottom: 2px solid #ffffff;
       padding-bottom: 2px; }
+      .footer .column.green-bg li a:hover {
+        border-bottom: 2px solid #000000; }
 
 .footer .h4 {
   text-align: left; }
