@@ -11,7 +11,7 @@ el.onclick = function() {
 var close = document.querySelector('.close-overlay');
 close.onclick = function() {
   var el = document.querySelector('.experience-overlay-block');
-  el.classList.remove('experience-overlay-block-toggled-active');
+  el.classList.toggle('experience-overlay-block-toggled-active');
 }
 
 var send_mail = document.querySelector('.send-email');
