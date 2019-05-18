@@ -5270,11 +5270,11 @@ body {
       margin-top: 4.2vw;
       margin-left: 12.5vw;
       line-height: 2.2rem;
-      width: calc(100vw / 24 * 6); } }
+      width: 25vw; } }
   @media screen and (min-width: 1088px) {
     .h1 {
-      font-size: 2.8em;
-      width: calc(100vw / 24 * 4); } }
+      font-size: 2.7em;
+      width: 16.66vw; } }
 
 .h2 {
   color: #000000;
@@ -5684,6 +5684,9 @@ body {
 @media screen and (min-width: 769px), print {
   .about .paul-photo {
     margin-top: -5rem; } }
+
+.about .paul-photo img {
+  opacity: 0.8; }
 
 .projects {
   margin-left: 16.25vw;
