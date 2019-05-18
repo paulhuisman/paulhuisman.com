@@ -5883,9 +5883,6 @@ body {
   height: 25px;
   cursor: pointer; }
 
-.close-overlay:hover {
-  opacity: 1; }
-
 .close-overlay:before, .close-overlay:after {
   position: absolute;
   left: 15px;
