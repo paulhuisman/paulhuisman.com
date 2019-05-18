@@ -5273,7 +5273,15 @@ body {
       width: 25vw; } }
   @media screen and (min-width: 1088px) {
     .h1 {
-      font-size: 2.7em;
+      font-size: 2.6em;
+      width: 16.66vw; } }
+  @media screen and (min-width: 1280px) {
+    .h1 {
+      font-size: 3em;
+      width: 20.833vw; } }
+  @media screen and (min-width: 1472px) {
+    .h1 {
+      font-size: 4em;
       width: 16.66vw; } }
 
 .h2 {
