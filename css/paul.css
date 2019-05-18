@@ -5275,8 +5275,6 @@ body {
     .h1 {
       font-size: 2.8em;
       width: calc(100vw / 24 * 4); } }
-  .h1:hover .logo-bar {
-    width: 100%; }
 
 .h2 {
   color: #000000;
