@@ -5740,6 +5740,8 @@ body {
     font-family: 'fugue';
     text-decoration: underline; }
     .media-item-content a:after {
+      transition: 200ms ease;
+      transition-property: transform;
       display: inline-block;
       content: "";
       width: 16px;
@@ -5747,6 +5749,8 @@ body {
       margin-left: 12px;
       background: transparent url("../assets/images/arrow.png") no-repeat;
       background-size: 16px 12px; }
+    .media-item-content a:hover:after {
+      transform: translateX(3px); }
   @media screen and (min-width: 769px), print {
     .media-item-content {
       float: right;
