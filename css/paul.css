@@ -5367,7 +5367,7 @@ body {
       font-family: 'fugue';
       display: table-cell;
       letter-spacing: 0.05em;
-      padding: 20px 6px 5px 6px;
+      padding: 20px 5px 5px 5px;
       font-size: 0.8rem;
       min-height: 180px; }
       .experience-overlay-block .cv-list-small li:last-child {
