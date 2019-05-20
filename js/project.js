@@ -10,7 +10,9 @@ el.onclick = function() {
 }
 
 // Send mail link
-var send_mail = document.querySelector('.send-email');
-send_mail.onclick = function() {
-  window.location.href = "mailto:paulhuisman88@gmail.com";
-}
+const sendMailList = document.querySelectorAll('.send-email');
+sendMailList.forEach(element => {
+    element.addEventListener('click', function() {
+        window.location.href = "mailto:paulhuisman88@gmail.com";
+    })
+});
