@@ -1,3 +1,11 @@
+::selection {
+  background: #151516;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #151516;
+  /* Gecko Browsers */ }
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -5629,7 +5637,7 @@ body {
 .subheader .experience-block {
   margin-top: -12.5vw; }
   .subheader .experience-block .content {
-    border-bottom: 20px solid #000000;
+    border-bottom: 20px solid #151516;
     padding: 3rem 8.3333vw 3rem 0;
     background-color: #efdb25; }
     @media screen and (min-width: 769px), print {
