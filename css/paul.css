@@ -5553,7 +5553,7 @@ body {
   padding-right: calc(100vw / 24 * 3.95); }
   @media screen and (max-width: 768px) {
     .get-in-touch {
-      min-height: 125px; } }
+      min-height: 120px; } }
   @media screen and (min-width: 769px), print {
     .get-in-touch {
       padding: 0;
