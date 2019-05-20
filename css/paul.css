@@ -5388,8 +5388,8 @@ body {
         display: inline-block;
         margin-top: 14px;
         position: absolute;
-        bottom: -4px;
-        left: 6px; }
+        bottom: -12px;
+        left: 5px; }
         @media screen and (min-width: 769px), print {
           .experience-overlay-block .cv-list-small li .yellow-circle {
             position: static;
