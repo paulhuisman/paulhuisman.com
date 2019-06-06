@@ -13,6 +13,6 @@ el.onclick = function() {
 const sendMailList = document.querySelectorAll('.send-email');
 sendMailList.forEach(element => {
     element.addEventListener('click', function() {
-        window.location.href = "mailto:paulhuisman88@gmail.com";
+        window.location.href = "mailto:paul@paulhuisman.com";
     })
 });
