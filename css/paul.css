@@ -5659,6 +5659,9 @@ body {
       @media screen and (min-width: 769px), print {
         .subheader .experience-block .content ul li {
           font-size: 1rem; } }
+    @media screen and (min-width: 769px), print {
+      .subheader .experience-block .content h4 {
+        margin-bottom: 1rem; } }
 
 .about .columns > .columns .is-7:first-child {
   padding-right: 2rem; }
