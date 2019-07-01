@@ -5494,7 +5494,7 @@ body {
   min-height: 66.666vw; }
   @media screen and (min-width: 769px), print {
     .header .column {
-      min-height: 37.5vw; } }
+      min-height: 37.56vw; } }
   @media screen and (min-width: 1088px) {
     .header .column {
       min-height: 25vw; } }
@@ -5503,7 +5503,7 @@ body {
   min-height: 0; }
   @media screen and (min-width: 769px), print {
     .header .column.is-5 {
-      min-height: 37.5vw; } }
+      min-height: 37.56vw; } }
 
 .header .column {
   background-size: 8.3333vw 8.3333vw;
@@ -5640,7 +5640,8 @@ body {
   margin: 0.6rem 0 0 0.3rem; }
 
 .subheader .experience-block {
-  margin-top: -12.5vw; }
+  margin-top: -12.53vw;
+  padding-left: 2px; }
   .subheader .experience-block .content {
     border-bottom: 20px solid #151516;
     padding: 3rem 8.3333vw 3rem 0;
