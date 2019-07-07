@@ -5794,7 +5794,7 @@ body {
     letter-spacing: 0.05em;
     text-decoration: underline;
     text-underline-position: under;
-    text-decoration-thickness: 10px;
+    text-decoration-thickness: 3px;
     text-decoration-color: #151516; }
     .media-item-content a:after {
       transition: 200ms ease;
