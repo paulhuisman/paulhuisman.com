@@ -5427,7 +5427,8 @@ body {
     .cv-list-big {
       top: 14rem;
       width: 17.5vw; } }
-  .cv-list-big .h3, .cv-list-big .h4 {
+  .cv-list-big .h3,
+  .cv-list-big .h4 {
     font-size: 0.8rem;
     color: #F9F9F9;
     text-transform: uppercase;
@@ -5698,11 +5699,11 @@ body {
   margin-left: 16.25vw;
   margin-right: 12.29vw;
   letter-spacing: 0.05em;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
   margin-bottom: 5rem; }
   @media screen and (min-width: 769px), print {
     .about {
-      margin-bottom: 12rem;
+      margin-bottom: 10rem;
       margin-left: 12.29vw;
       margin-right: 0; } }
 
@@ -5711,10 +5712,13 @@ body {
     margin-bottom: 2rem; } }
 
 .about h2 {
-  font-size: 4.3rem;
+  font-size: 4rem;
   line-height: 84px;
   letter-spacing: 0.05em;
   margin-bottom: 2.5rem; }
+  @media screen and (min-width: 769px), print {
+    .about h2 {
+      font-size: 5rem; } }
 
 @media screen and (min-width: 769px), print {
   .about .paul-photo {
@@ -5947,7 +5951,8 @@ body {
   height: 25px;
   cursor: pointer; }
 
-.close-overlay:before, .close-overlay:after {
+.close-overlay:before,
+.close-overlay:after {
   position: absolute;
   left: 15px;
   content: ' ';
