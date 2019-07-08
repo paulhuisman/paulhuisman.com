@@ -5794,20 +5794,20 @@ body {
     letter-spacing: 0.05em;
     text-decoration: underline;
     text-underline-position: under;
-    text-decoration-thickness: 3px;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
     text-decoration-color: #151516; }
     .media-item-content a:after {
       transition: 200ms ease;
       transition-property: transform;
       display: inline-block;
+      vertical-align: middle;
       content: "";
       width: 16px;
-      height: 16px;
-      margin-left: 12px;
-      padding-bottom: 4px;
+      height: 12px;
+      margin-left: 10px;
       background: transparent url("../assets/images/arrow.png") no-repeat;
-      background-size: 16px 12px;
-      background-position: 0px 4px; }
+      background-size: 16px 12px; }
     .media-item-content a:hover:after {
       transform: translateX(3px); }
   @media screen and (min-width: 769px), print {
