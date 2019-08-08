@@ -5848,6 +5848,9 @@ body {
       background-size: 16px 12px; }
     .media-item-content a:hover:after {
       transform: translateX(3px); }
+  .media-item-content .no-url-available {
+    font-family: 'fugue';
+    letter-spacing: 0.05em; }
   @media screen and (min-width: 769px), print {
     .media-item-content {
       float: right;
