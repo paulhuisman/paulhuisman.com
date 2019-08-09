@@ -5828,14 +5828,15 @@ body {
     margin-bottom: 2.5rem;
     line-height: 1.6rem; }
   .media-item-content a {
-    font-family: 'fugue';
     letter-spacing: 0.05em;
     text-decoration: underline;
     text-underline-position: under;
     text-underline-offset: 2px;
     text-decoration-thickness: 2px;
     text-decoration-color: #151516; }
-    .media-item-content a:after {
+  .media-item-content a.media-item-link {
+    font-family: 'fugue'; }
+    .media-item-content a.media-item-link:after {
       transition: 200ms ease;
       transition-property: transform;
       display: inline-block;
@@ -5846,7 +5847,7 @@ body {
       margin-left: 10px;
       background: transparent url("../assets/images/arrow.png") no-repeat;
       background-size: 16px 12px; }
-    .media-item-content a:hover:after {
+    .media-item-content a.media-item-link:hover:after {
       transform: translateX(3px); }
   .media-item-content .no-url-available {
     font-family: 'fugue';
