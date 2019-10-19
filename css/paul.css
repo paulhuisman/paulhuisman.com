@@ -5258,7 +5258,7 @@ body {
 
 .h1 {
   display: block;
-  font-size: 1.8em;
+  font-size: 1.7em;
   font-weight: 500;
   position: relative;
   letter-spacing: 0.05em;
@@ -5268,7 +5268,7 @@ body {
   margin-left: calc(100vw / 12 * 2);
   margin-top: 1px;
   color: #ffffff;
-  width: 33.333vw;
+  width: 41.1888vw;
   line-height: 1.8rem; }
   @media screen and (min-width: 769px), print {
     .h1 {
