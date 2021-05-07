@@ -5395,6 +5395,12 @@ body {
         top: 25vw;
       } 
     }
+    @media screen and (min-width: 1680px) {
+      .experience-overlay-block .cv-list-small {
+        left: 1.16vw; 
+        top: 27vw;
+      } 
+    }
     .experience-overlay-block .cv-list-small li {
       font-family: 'fugue';
       display: table-cell;
