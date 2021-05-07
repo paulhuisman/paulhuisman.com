@@ -5370,7 +5370,7 @@ body {
     margin: 0;
     padding: 0;
     position: fixed;
-    left: 2px;
+    left: .5vw;
     top: 190px; }
     @media screen and (min-width: 750px), print {
       .experience-overlay-block .cv-list-small {
@@ -5385,7 +5385,7 @@ body {
     }
     @media screen and (min-width: 1088px) {
       .experience-overlay-block .cv-list-small {
-        left: .8vw; 
+        left: .6vw; 
         top: 310px;
       } 
     }
@@ -5406,6 +5406,7 @@ body {
       .experience-overlay-block .cv-list-small li:last-child {
         position: relative; 
       }
+
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
           font-size: 1rem; 
