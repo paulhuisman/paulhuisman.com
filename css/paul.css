@@ -5392,7 +5392,7 @@ body {
     @media screen and (min-width: 1480px) {
       .experience-overlay-block .cv-list-small {
         left: 1.16vw; 
-        top: 430px;
+        top: 25vw;
       } 
     }
     .experience-overlay-block .cv-list-small li {
