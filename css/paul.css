@@ -1,3 +1,6 @@
+/*
+ * Why are you here? Don't look at this code, it's from 2018.
+ */
 ::selection {
   background: #151516;
   /* WebKit/Blink Browsers */ }
@@ -5858,21 +5861,21 @@ body {
       margin-right: 30px; } }
 
 .media-item h3 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2  rem;
   margin-top: 0px; }
 
 .media-item .h4 {
   font-size: 1rem;
   font-family: 'fugue';
   letter-spacing: 0.05em;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   margin-top: 0px;
   text-align: left; }
 
 .media-item-content {
   letter-spacing: 0.05em; }
   .media-item-content p {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     line-height: 1.6rem; }
   .media-item-content a {
     letter-spacing: 0.05em;
