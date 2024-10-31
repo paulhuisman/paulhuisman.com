@@ -27,6 +27,20 @@
     gtag('js', new Date());
 
     gtag('config', 'G-SMBGDNDVZ1');
+
+    // Select all links with the class "tracked-link"
+    const links = document.querySelectorAll('.tracked-link');
+
+    links.forEach(link => {
+      link.addEventListener('click', function(event) {
+        // Send the event to GA4
+        gtag('event', 'link_click', {
+          'event_category': 'engagement',
+          'event_label': this.getAttribute('data-event-label'),
+          'value': 1
+        });
+      });
+    });
   </script>
   <link rel="stylesheet" href="css/paul.css">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
@@ -96,10 +110,10 @@
           <ul>
             <li><a class="send-email">Send mail</a></li>
             <li><a href="https://www.linkedin.com/in/paulhuisman/"
-                onclick="_gaq.push(['_trackEvent', 'Outside link', 'LinkedIn']);" target="_blank">Check LinkedIn</a>
+              class="tracked-link" data-event-label="LinkedIn" target="_blank">Check LinkedIn</a>
             </li>
             <li><a class="is-hidden-mobile" href="files/CV-PaulHuisman.pdf" target="_blank" download
-                onclick="_gaq.push(['_trackEvent', 'Outside link', 'Download CV']);">Download CV</a></li>
+              class="tracked-link" data-event-label="CV Download">Download CV</a></li>
           </ul>
         </div>
       </div>
@@ -189,7 +203,7 @@
           <p>Frontend development and UX/UI for RTL & Ad Alliance's new client portal application. Clients can manage all their advertising solutions in one portal and get insights on their running campaigns. Build using React, NextJS, TypeScript and Tailwind.</p>
           <p class="no-url-available">
             Internal application | 
-            <a data-fslightbox="aa" href="/files/screenshots/screenshot_aa1.png">
+            <a data-fslightbox="aa" href="/files/screenshots/screenshot_aa1.png" class="tracked-link" data-event-label="RTL Screenshots">
               Screenshots
             </a>
             <a data-fslightbox="aa" href="/files/screenshots/screenshot_aa2.png"></a>
@@ -229,7 +243,7 @@
           <p>Developing a independent solar power projects platform for <a href="https://www.zoncoalitie.nl/" target="_blank">Zoncoalitie</a> to bring roof owners and solar suppliers together using Laravel and VueJS.</p>
           <p class="no-url-available">
             Internal application | 
-            <a data-fslightbox="zonc" href="/files/screenshots/screenshot_zoncoalitie1.png">
+            <a data-fslightbox="zonc" href="/files/screenshots/screenshot_zoncoalitie1.png" class="tracked-link" data-event-label="ZonCoalitie Screenshots"></a>
               Screenshots
             </a>
             <a data-fslightbox="zonc" href="/files/screenshots/screenshot_zoncoalitie2.png"></a>
