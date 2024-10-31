@@ -28,12 +28,10 @@
 
     gtag('config', 'G-SMBGDNDVZ1');
 
-    // Select all links with the class "tracked-link"
-    const links = document.querySelectorAll('.tracked-link');
-
-    links.forEach(link => {
+    // track links
+    document.querySelectorAll('.tracked-link').forEach(link => {
       link.addEventListener('click', function(event) {
-        // Send the event to GA4
+        // send the event to GA4
         gtag('event', 'link_click', {
           'event_category': 'engagement',
           'event_label': this.getAttribute('data-event-label'),
