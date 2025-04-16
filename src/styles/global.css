@@ -1,5 +1,21 @@
 @import 'tailwindcss';
-
+@theme {
+  --color-forest-green: #44a55f;
+  --animate-pulser: pulser 2.5s ease-in infinite;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-roboto-mono: 'Roboto Mono', sans-serif;
+  --color-off-white: #f9f9f9;
+  @keyframes pulser {
+    0%,
+    100% {
+      opacity: 0.15;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
 html,
 body {
   font-family: 'Inter', sans-serif !important;
