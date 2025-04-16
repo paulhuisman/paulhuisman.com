@@ -1,0 +1,61 @@
+---
+import '../styles/global.css';
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title || 'Paul Huisman | Freelance Web Developer'}</title>
+
+    <!-- SEO Meta Tags -->
+    <meta property="og:url" content="https://www.paulhuisman.com" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content={title ||
+        'Paul Huisman | Freelance Web Developer based in Rotterdam, The Netherlands'}
+    />
+    <meta
+      property="og:description"
+      content={description ||
+        'Freelance Web Developer with over 10 years experience specialized in PHP backend development'}
+    />
+    <meta property="og:image" content="/assets/images/fb_tag.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content={title ||
+        'Paul Huisman | Freelance Web Developer based in Rotterdam, The Netherlands'}
+    />
+    <meta
+      name="twitter:description"
+      content={description ||
+        'Freelance Web Developer with over 10 years experience specialized in PHP backend development'}
+    />
+    <meta name="twitter:image" content="/assets/images/fb_tag.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

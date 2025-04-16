@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+html,
+body {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400;
+  font-size: 16px;
+}
+[data-header-background] {
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(128, 128, 128, 0.15) 0px,
+      rgba(128, 128, 128, 0.15) 1px,
+      transparent 1px,
+      transparent 64px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(128, 128, 128, 0.15) 0px,
+      rgba(128, 128, 128, 0.15) 1px,
+      transparent 1px,
+      transparent 64px
+    );
+}
+
+@media (max-width: 640px) {
+  [data-header-background] {
+    background-image:
+      repeating-linear-gradient(
+        to right,
+        rgba(128, 128, 128, 0.1) 0px,
+        rgba(128, 128, 128, 0.1) 1px,
+        transparent 1px,
+        transparent 16px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        rgba(128, 128, 128, 0.1) 0px,
+        rgba(128, 128, 128, 0.1) 1px,
+        transparent 1px,
+        transparent 16px
+      );
+  }
+}
