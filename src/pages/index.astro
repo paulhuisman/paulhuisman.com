@@ -1,21 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.tsx';
-import SubHeader from '../components/SubHeader.tsx';
-import Footer from '../components/Footer.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import SidebarOverlay from '../components/SidebarOverlay.tsx';
-import About from '../components/About';
-
-// get all projects from the content collection
-const projects = await getCollection('projects');
-const sortedProjects = projects.sort((a, b) => a.data.order - b.data.order);
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/sections/Header';
+import SubHeader from '@/components/sections/SubHeader';
+import Footer from '@/components/sections/Footer.astro';
+import SidebarOverlay from '@/components/SidebarOverlay.tsx';
+import About from '@/components/sections/About';
+import Projects from '@/components/sections/Projects.astro';
+import More from '@/components/More.astro';
 
 // get about content
 const about = await import('../content/about.md');
 const aboutContent = about.frontmatter;
-console.log('🚀 ~ aboutContent:', aboutContent);
 ---
 
 <script>
@@ -46,21 +41,20 @@ console.log('🚀 ~ aboutContent:', aboutContent);
   <SidebarOverlay client:load />
 
   <div class="wrapper bg-gray-100 text-black">
-    <!-- Header -->
-    <Header client:load />
-
     <div class="ml-16">
+      <!-- Header -->
+      <Header client:load />
       <!-- Subheader -->
 
       <SubHeader client:load />
 
       <!-- Binary Section -->
       <section
-        class="py-8 bg-gray-100 overflow-hidden text-center opacity-0"
+        class="overflow-hidden bg-gray-100 py-8 text-center opacity-0"
         data-binary-title
       >
         <div
-          class="flex flex-wrap justify-center text-xs text-gray-400 font-roboto-mono"
+          class="font-roboto-mono flex flex-wrap justify-center text-xs text-gray-400"
         >
           <div class="mx-1">01110011</div>
           <div class="mx-1">01100001</div>
@@ -88,60 +82,10 @@ console.log('🚀 ~ aboutContent:', aboutContent);
       />
 
       <!-- Projects Section -->
-      <section class="container mx-auto px-8 md:px-12 py-10 md:py-16">
-        <h2 class="text-4xl font-bold mb-8 font-montserrat">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {
-            sortedProjects.map((project) => (
-              <ProjectCard
-                title={project.data.title}
-                role={project.data.role}
-                description={project.data.description}
-                url={project.data.url}
-              />
-            ))
-          }
-        </div>
-      </section>
+      <Projects />
 
       <!-- More Section -->
-      <section class="container mx-auto px-8 md:px-12 py-10 md:py-16">
-        <h2 class="text-4xl font-bold mb-8 font-montserrat">More</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white shadow-md p-6 rounded-lg">
-            <div class="h-1 w-16 bg-green-custom mb-4"></div>
-            <h3 class="text-2xl font-bold mb-2">Github</h3>
-            <p class="mb-4">
-              Have a look at my open-source projects/contributions.
-            </p>
-            <a
-              href="https://github.com/paulhuisman"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-green-custom hover:underline"
-            >
-              View the work
-            </a>
-          </div>
-
-          <div class="bg-white shadow-md p-6 rounded-lg">
-            <div class="h-1 w-16 bg-green-custom mb-4"></div>
-            <h3 class="text-2xl font-bold mb-2">Photography</h3>
-            <p class="mb-4">
-              Everyone needs hobbies. I got quite a few, one of them is
-              photography.
-            </p>
-            <a
-              href="https://500px.com/paulhuisman"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-green-custom hover:underline"
-            >
-              View photos
-            </a>
-          </div>
-        </div>
-      </section>
+      <More />
     </div>
     <!-- Footer -->
     <Footer />
