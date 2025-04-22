@@ -66,17 +66,17 @@ const SidebarOverlay = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, ease: 'easeIn' }}
         >
-          <ul className="mt-20 flex w-screen items-center justify-start text-xs text-white transition-all duration-300 md:mt-40 md:text-sm">
+          <ul className="mt-38 flex h-5 w-screen items-center justify-start text-xs text-white transition-all duration-300 md:mt-40 md:text-sm lg:mt-20 lg:h-auto">
             <li>
-              <div className="animate-pulser size-5 rounded-full bg-yellow-300"></div>
+              <div className="animate-pulser size-3.5 rounded-full bg-yellow-300 lg:size-5"></div>
             </li>
-            <li className="mr-20 ml-8 tracking-wider">
+            <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-20 lg:h-auto lg:text-wrap">
               Freelance - &apos;19 - NOW
             </li>
-            <li className="mr-20 tracking-wider">
+            <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-20 lg:h-auto lg:text-wrap">
               Dept Agency - &apos;17-&apos;18
             </li>
-            <li className="mr-16 tracking-wider">
+            <li className="ml-8 h-4 tracking-wider text-nowrap lg:mr-20 lg:h-auto lg:text-wrap">
               Hoppinger - &apos;10-&apos;17
             </li>
           </ul>

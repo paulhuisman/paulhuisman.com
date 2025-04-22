@@ -33,7 +33,7 @@ const SubHeader = () => {
             text="Senior web developer with code & people skills."
             el="h2"
             staggerChildren={0.05}
-            className="font-montserrat -mt-10 mb-4 block translate-y-3 text-3xl font-bold md:text-6xl lg:text-7xl xl:text-8xl"
+            className="font-montserrat -mt-10 mb-4 block translate-y-3 text-4xl font-bold md:text-6xl lg:text-7xl xl:text-8xl"
             animation={{
               hidden: {
                 opacity: 0,

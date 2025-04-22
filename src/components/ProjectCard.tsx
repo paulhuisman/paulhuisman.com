@@ -18,9 +18,9 @@ const ProjectCard = ({
   url,
 }: ProjectCardProps) => {
   return (
-    <div className="mb-8 flex gap-8">
+    <div className="mb-4 flex flex-col gap-4 lg:mb-8 lg:flex-row lg:gap-8">
       <div className="mt-2 block h-5 w-20 flex-shrink-0 bg-black"></div>
-      <div className="text-gray-900 md:mr-32">
+      <div className="text-gray-900 lg:mr-12 xl:mr-32">
         <h3 className="font-montserrat mb-2 text-3xl font-bold">{title}</h3>
         <h4 className="mb-4 text-sm text-gray-600">
           {role} | {period}

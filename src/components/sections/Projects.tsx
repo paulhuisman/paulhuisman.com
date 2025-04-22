@@ -27,7 +27,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
 
   return (
     <Container
-      className="mt-20 lg:mt-48"
+      className="mt-20 lg:mt-48 lg:pr-0"
       margin="0px 0px -100px 0px"
       revealOnScroll
     >
