@@ -52,7 +52,7 @@ const SidebarOverlay = () => {
         animate={{ translateX: 0 }}
         transition={{ duration: 0.4, delay: 1.1, ease: 'easeIn' }}
         className={cn(
-          'fixed top-0 z-30 h-full w-8 bg-gray-900 transition-all duration-150 ease-in hover:pt-[2px] md:w-16 hover:md:w-17',
+          'fixed top-0 z-30 h-full w-8 bg-gray-900 transition-all duration-150 ease-in hover:pt-[2px] lg:w-14 hover:lg:w-15 xl:w-14',
           {
             'cursor-pointer': !isExtended,
           },
@@ -66,17 +66,17 @@ const SidebarOverlay = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, ease: 'easeIn' }}
         >
-          <ul className="mt-38 flex h-5 w-screen items-center justify-start text-xs text-white transition-all duration-300 md:mt-40 md:text-sm lg:mt-20 lg:h-auto">
+          <ul className="mt-41 flex h-5 w-screen items-center justify-start text-xs text-white transition-all duration-300 md:mt-30 md:text-sm lg:mt-40 lg:h-auto">
             <li>
               <div className="animate-pulser size-3.5 rounded-full bg-yellow-300 lg:size-5"></div>
             </li>
-            <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-20 lg:h-auto lg:text-wrap">
+            <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-10 lg:h-auto lg:text-wrap">
               Freelance - &apos;19 - NOW
             </li>
-            <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-20 lg:h-auto lg:text-wrap">
+            <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-10 lg:h-auto lg:text-wrap">
               Dept Agency - &apos;17-&apos;18
             </li>
-            <li className="ml-8 h-4 tracking-wider text-nowrap lg:mr-20 lg:h-auto lg:text-wrap">
+            <li className="ml-8 h-4 tracking-wider text-nowrap lg:ml-10 lg:h-auto lg:text-wrap">
               Hoppinger - &apos;10-&apos;17
             </li>
           </ul>

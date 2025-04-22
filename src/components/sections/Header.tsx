@@ -72,7 +72,7 @@ const Header = () => {
         ))}
       </div>
 
-      <Container className="xl:py-[54px] xl:pb-40">
+      <Container className="">
         <div className="flex w-full flex-col-reverse justify-between transition-all md:flex-row">
           <div className="z-10">
             <motion.h1
@@ -112,7 +112,7 @@ const Header = () => {
                   />
                 </svg>
               </div>
-              <h4 className="mb-2.5 text-base font-bold text-black">
+              <h4 className="mb-2.5 text-sm font-bold text-black lg:text-base">
                 GET IN TOUCH
               </h4>
             </motion.div>
@@ -156,7 +156,7 @@ const Header = () => {
               <motion.li
                 key="cv"
                 variants={linkVariants}
-                className="group relative hidden md:inline-block"
+                className="group relative"
               >
                 <a
                   href="/files/CV-PaulHuisman.pdf"

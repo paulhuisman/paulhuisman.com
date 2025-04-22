@@ -6,24 +6,16 @@ import ProjectCard from '@/components/ProjectCard';
 import { motion } from 'motion/react';
 
 type Project = {
-  data: {
-    title: string;
-    role: string;
-    period: string;
-    description: string;
-    url: string;
-    order: number;
-  };
+  title: string;
+  role: string;
+  period: string;
+  description: string;
+  url: string;
+  order: number;
 };
 
-type ProjectsProps = {
-  projects: Project[];
-};
-
-const Projects: React.FC<ProjectsProps> = ({ projects }) => {
-  const sortedProjects = [...projects].sort(
-    (a, b) => a.data.order - b.data.order,
-  );
+const Projects = ({ projects }: { projects: Project[] }) => {
+  const sortedProjects = [...projects].sort((a, b) => a.order - b.order);
 
   return (
     <Container
