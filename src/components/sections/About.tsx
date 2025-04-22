@@ -11,20 +11,15 @@ interface AboutProps {
 }
 
 const About = ({ content, image }: AboutProps) => {
-  const sectionRef = useRef(null);
-
-  const isInView = useInView(sectionRef, {
-    once: true,
-    margin: '0px 0px -300px 0px',
-  });
-
   return (
     <Container revealOnScroll margin="0px 0px -300px 0px">
-      <h2 className="font-montserrat mb-8 text-4xl font-bold">About</h2>
+      <h2 className="font-montserrat mb-8 text-4xl font-bold xl:text-6xl">
+        About
+      </h2>
       <div className="flex flex-col md:flex-row">
         <div className="mb-8 w-full md:mb-0 md:w-7/12">
-          <div className="grid grid-cols-1 gap-10 text-gray-900 md:mr-40 md:grid-cols-2">
-            <div className="leading-relaxed">
+          <div className="grid grid-cols-1 gap-10 text-gray-900 md:mr-32 md:grid-cols-2">
+            <div className="leading-relaxed md:mr-12">
               I've been working in web development since 2008, and I have a real
               passion for writing clean code and collaborating with others. One
               of my key strengths is taking a client's vision and turning it
@@ -33,7 +28,7 @@ const About = ({ content, image }: AboutProps) => {
               process and work together to create products that are truly
               user-centered.
             </div>
-            <div className="leading-relaxed">
+            <div className="leading-relaxed md:mr-12">
               When I first started out, I focused primarily on front-end
               development. While I enjoyed it, I craved a new challenge, so I
               switched over to back-end development. After several years, I
@@ -47,9 +42,11 @@ const About = ({ content, image }: AboutProps) => {
           </div>
         </div>
         <div className="top-0 right-0 w-full md:absolute md:max-w-[400px]">
-          {image && (
-            <img src={image} alt="Paul Huisman" className="h-auto w-full" />
-          )}
+          <img
+            src="/assets/paul.jpg"
+            alt="Paul Huisman"
+            className="h-auto w-full"
+          />
         </div>
       </div>
     </Container>

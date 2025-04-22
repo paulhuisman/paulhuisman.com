@@ -1,5 +1,5 @@
 import { motion, useInView, useAnimation, type Variant } from 'motion/react';
-import { useEffect, useRef, type JSX } from 'react';
+import { useId, useEffect, useRef, type JSX } from 'react';
 
 type AnimatedTextProps = {
   text: string | string[];
@@ -37,6 +37,7 @@ export const AnimatedText = ({
   staggerChildren = 0.1,
   animation = defaultAnimations,
 }: AnimatedTextProps) => {
+  const id = useId();
   const controls = useAnimation();
   const textArray = Array.isArray(text) ? text : [text];
   const ref = useRef(null);
@@ -77,9 +78,9 @@ export const AnimatedText = ({
         aria-hidden
       >
         {textArray.map((line, lineIndex) => (
-          <span className="block" key={`${line}-${lineIndex}`}>
+          <span className="block" key={`${id}-line-${lineIndex}`}>
             {line.split(' ').map((word, wordIndex) => (
-              <span className="inline-block" key={`${word}-${wordIndex}`}>
+              <span className="inline-block" key={`${id}-${word}-${wordIndex}`}>
                 {word.split('').map((char, charIndex) => (
                   <motion.span
                     key={`${char}-${charIndex}`}

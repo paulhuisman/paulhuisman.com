@@ -56,7 +56,7 @@ const Header = () => {
       <div className="absolute top-0 z-0 grid w-full grid-cols-20 lg:grid-cols-29 xl:grid-cols-32">
         {Array.from(Array(cols * rows)).map((_, i) => (
           <motion.div
-            key={i}
+            key={`tile-${i}`}
             custom={Math.floor(i / cols)}
             variants={tileVariants}
             initial="hidden"
@@ -94,17 +94,17 @@ const Header = () => {
 
           <div className="font-inter z-10 mx-[4px] mb-8 flex w-full justify-between p-0 md:mb-0 md:block md:w-auto md:p-2">
             <motion.div
-              className="flex gap-2"
+              className="flex gap-2 align-middle"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ease: 'easeIn', duration: 0.25, delay: 0.5 }}
             >
-              <div className="group flex size-7 justify-center rounded-full bg-yellow-300 pt-[5px] align-middle shadow-md">
+              <div className="group hidden size-7 justify-center rounded-full bg-yellow-300 pt-[5px] align-middle shadow-md md:flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  className="size-5 stroke-gray-900 stroke-[1.5]"
+                  className="size-[18px] stroke-gray-900 stroke-[1.5]"
                 >
                   <path
                     stroke-linecap="round"
@@ -113,7 +113,7 @@ const Header = () => {
                   />
                 </svg>
               </div>
-              <h4 className="mb-2.5 text-end text-base font-bold text-black">
+              <h4 className="mb-2.5 text-base font-bold text-black">
                 GET IN TOUCH
               </h4>
             </motion.div>

@@ -1,13 +1,14 @@
 ---
-title: 'AUrate New York'
-role: 'Freelance Developer'
-description: 'Developing a custom made order dashboard for AUrate to share insights in the open production orders. Calculating estimated time left based on the several production centres. Full-stack development, using Laravel and VueJS.'
-url: ''
-isInternalApp: true
+title: 'New10'
+role: 'Freelance Frontend Engineer'
+period: 'Jan 2022 - Mar 2023'
+description: 'Working on UI components and services for New10 (part of ABN AMRO) using React, NextJS, TypeScript, Node.js, AWS (serverless), Terraform and more.'
+url: 'https://www.new10.com'
+isInternalApp: false
 order: 2
 ---
 
-# AUrate New York
+# New10
 
 This project involved building a custom order dashboard for AUrate New York's production team. The dashboard provides real-time insights into production orders across multiple facilities.
 

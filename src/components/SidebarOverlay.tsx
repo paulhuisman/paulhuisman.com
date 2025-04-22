@@ -1,50 +1,136 @@
-import { motion } from 'motion/react';
+import { cn } from '@/util/cn';
+import { AnimatePresence, motion } from 'motion/react';
+import { useState } from 'react';
 
 const SidebarOverlay = () => {
+  const [isExtended, setIsExtended] = useState(false);
+
   return (
-    <div className="group absolute top-0 left-0 h-full cursor-pointer">
-      <div className="pointer-events-none fixed inset-0 z-20 bg-black opacity-0 transition-all duration-300 group-hover:opacity-60"></div>
-      {/* sidebar */}
+    <AnimatePresence>
+      {/* full-size black background when sidebar is hovered */}
+      <div
+        className={cn(
+          'pointer-events-none fixed inset-0 z-20 bg-black transition-all duration-300',
+          isExtended ? 'opacity-60' : 'opacity-0',
+        )}
+      ></div>
+      {/* sidebar wrapper */}
       <motion.div
-        initial={{ opacity: '0', translateX: '-100%' }}
-        animate={{ opacity: '1', translateX: 0 }}
-        transition={{ duration: 0.3, delay: 0.2, ease: 'anticipate' }}
-        className="absolute top-0 left-0 z-30 h-full w-12 bg-gray-900 transition-all duration-200 ease-in group-hover:z-40 group-hover:w-full md:w-16 md:group-hover:w-[544px] xl:group-hover:w-[654px]"
+        initial={{ translateX: '-100%' }}
+        animate={{ translateX: 0 }}
+        transition={{ duration: 0.4, delay: 1.1, ease: 'easeIn' }}
+        className="absolute top-0 z-30 h-full w-8 cursor-pointer bg-gray-900 md:w-16"
+        onClick={() => setIsExtended(!isExtended)}
       >
-        {/* rotated Text (visible in the closed state) */}
-        <div className="flex h-full rotate-90 transform flex-col justify-center align-middle whitespace-nowrap group-hover:hidden group-hover:opacity-0">
-          <ul className="opactiy-100 flex w-screen gap-12 align-middle text-sm text-white transition-all duration-300">
+        {/* sidebar closed state */}
+        <motion.div
+          className={cn('rotate-90 transform transition-all duration-300')}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3, ease: 'easeIn' }}
+        >
+          <ul className="mt-40 flex w-screen items-center justify-start text-xs text-white transition-all duration-300 md:text-sm">
             <li>
               <div className="animate-pulser size-5 rounded-full bg-yellow-300"></div>
             </li>
-            <li>Freelance - &apos;18 - NOW</li>
-            <li>Dept Agency - &apos;17-&apos;18</li>
-            <li>Hoppinger - &apos;10-&apos;17</li>
+            <li className="mr-20 ml-8 tracking-wider">
+              Freelance - &apos;19 - NOW
+            </li>
+            <li className="mr-20 tracking-wider">
+              Dept Agency - &apos;17-&apos;18
+            </li>
+            <li className="mr-16 tracking-wider">
+              Hoppinger - &apos;10-&apos;17
+            </li>
           </ul>
-        </div>
-        {/* sidebar Content (optional, for expanded state) */}
-        <div className="text-off-white fixed top-0 px-10 py-10 md:py-14">
-          <div className="min-w-[400px] border-l-10 border-white pl-30 opacity-0 transition-opacity delay-50 ease-in group-hover:opacity-100 xl:pl-50">
+        </motion.div>
+
+        {/* sidebar extended state */}
+        <motion.div
+          className={cn(
+            'text-off-white fixed inset-0 h-auto w-0 bg-gray-900 shadow-md md:py-14 lg:h-full',
+            { 'w-full px-10 py-10': isExtended },
+          )}
+          animate={isExtended ? 'open' : 'closed'}
+          variants={{
+            closed: {
+              width: '0rem',
+              rotateY: 0,
+              scale: 1,
+              transition: {
+                duration: 0.6,
+                ease: [0.4, 0, 0.2, 1],
+              },
+            },
+            open: {
+              width: '100vw',
+              rotateY: 0,
+              scale: 1,
+              transition: {
+                duration: 0.8,
+                ease: [0.4, 0, 0.2, 1],
+              },
+            },
+          }}
+          style={{
+            transformOrigin: 'left center',
+            perspective: 1000,
+          }}
+          whileHover={!isExtended ? { scale: 1.05, rotateY: 5 } : {}}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className={cn(
+              'absolute top-3 right-3 hidden size-10 stroke-white',
+              {
+                block: isExtended,
+              },
+            )}
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isExtended ? 1 : 0 }}
+            transition={{ duration: 0.05, ease: 'easeIn', delay: 0.4 }}
+            className="min-w-[400px] border-l-10 border-white pl-30"
+          >
             <h1 className="text-3xl font-bold md:text-4xl">Paul Huisman</h1>
             <div className="logo-bar mt-2 h-3 w-22 bg-yellow-300"></div>
-          </div>
-          <div className="mt-14 min-w-[400px] pl-32 opacity-0 transition-opacity delay-50 ease-in group-hover:opacity-100 xl:pl-52">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isExtended ? 1 : 0 }}
+            transition={{ duration: 0.3, ease: 'easeIn', delay: 0.4 }}
+            className="mt-14 pl-32"
+          >
             <h2 className="mb-14 text-xs tracking-wider uppercase">
               curriculum vitae
             </h2>
-            <ul className="mr-6">
-              <li className="mb-10">
-                <h3 className="font-montserrat text-base uppercase">
+            <ul className="mr-6 grid grid-cols-2 gap-x-0 gap-y-24">
+              <li className="lg:max-w-[400px]">
+                <h3 className="font-montserrat text-base font-bold uppercase">
                   Freelance Frontend Engineer
                 </h3>
                 <div className="mb-2 text-xs italic">2019 - NOW</div>
                 <p className="font-inter text-sm text-gray-400 italic">
-                  Building beautiful frontend applications where the user feels
-                  king.
+                  Building beautiful frontend applications where the user is at
+                  the center of attention, developing projects for RTL, New10,
+                  Ring, Zoncoalitie, AUrate, Stager, among others.
                 </p>
               </li>
-              <li className="mb-10">
-                <h3 className="font-montserrat text-base uppercase">
+              <li className="lg:max-w-[400px]">
+                <h3 className="font-montserrat text-base font-bold uppercase">
                   Senior PHP Developer at Dept Agency
                 </h3>
                 <div className="mb-2 text-xs italic">2017 - 2018</div>
@@ -54,8 +140,8 @@ const SidebarOverlay = () => {
                   together with creatives.
                 </p>
               </li>
-              <li className="mb-8">
-                <h3 className="font-montserrat text-base uppercase">
+              <li className="lg:max-w-[400px]">
+                <h3 className="font-montserrat text-base font-bold uppercase">
                   Lead Developer at Hoppinger
                 </h3>
                 <div className="mb-2 text-xs italic">2014 - 2017</div>
@@ -66,8 +152,8 @@ const SidebarOverlay = () => {
                   owner (client) to get the best result possible.
                 </p>
               </li>
-              <li className="mb-8">
-                <h3 className="font-montserrat text-base uppercase">
+              <li className="lg:max-w-[400px]">
+                <h3 className="font-montserrat text-base font-bold uppercase">
                   Full Stack Developer at Hoppinger
                 </h3>
                 <div className="mb-2 text-xs italic">2011 - 2014</div>
@@ -76,8 +162,8 @@ const SidebarOverlay = () => {
                   first as a front-end developer, later focussing on backend.
                 </p>
               </li>
-              <li className="mb-8">
-                <h3 className="font-montserrat text-base uppercase">
+              <li className="lg:max-w-[400px]">
+                <h3 className="font-montserrat text-base font-bold uppercase">
                   Front-end Developer at Campagne Rotterdam
                 </h3>
                 <div className="mb-2 text-xs italic">2009 - 2010</div>
@@ -86,7 +172,7 @@ const SidebarOverlay = () => {
                 </p>
               </li>
               <li className="mb-0">
-                <h3 className="font-montserrat text-base uppercase">
+                <h3 className="font-montserrat text-base font-bold uppercase">
                   BACHELOR OF INFORMATION AND COMMUNICATION TECHNOLOG
                 </h3>
                 <div className="mb-2 text-xs italic">2005 - 2010</div>
@@ -95,10 +181,10 @@ const SidebarOverlay = () => {
                 </p>
               </li>
             </ul>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </motion.div>
-    </div>
+    </AnimatePresence>
   );
 };
 

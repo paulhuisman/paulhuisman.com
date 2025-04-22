@@ -1,6 +1,7 @@
 ---
 title: 'RTL'
 role: 'Freelance Developer'
+period: 'Apr 2023 - Mar 2025'
 description: 'Developing a custom made order dashboard for AUrate to share insights in the open production orders. Calculating estimated time left based on the several production centres. Full-stack development, using Laravel and VueJS.'
 url: ''
 isInternalApp: true

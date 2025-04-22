@@ -49,9 +49,9 @@ const SubHeader = () => {
             }}
           />
         </div>
-        <div className="w-full md:mr-[3px] md:ml-auto md:w-1/3 md:max-w-[460px]">
+        <div className="w-full md:mr-[3px] md:ml-auto md:w-1/3 xl:max-w-[462px]">
           <motion.div
-            className="translate-x-0 bg-yellow-300 p-8"
+            className="translate-x-0 bg-yellow-300 p-8 xl:mt-0.5"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: 'easeIn', duration: 0.3, delay: 1 }}
@@ -73,7 +73,7 @@ const SubHeader = () => {
                 'React',
                 'PHP',
                 'Next.js',
-                'Rails',
+                'Ruby on Rails',
                 'TypeScript',
                 'Test-driven development',
                 'Vue.js',
