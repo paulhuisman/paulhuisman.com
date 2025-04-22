@@ -25,9 +25,9 @@ const itemVariants = {
 
 const SubHeader = () => {
   return (
-    <Container className="lg:-mt-2">
-      <div className="flex flex-col gap-10 md:flex-row">
-        <div className="w-full md:w-1/2">
+    <Container className="pt-10 lg:-mt-2 lg:pt-20">
+      <div className="flex flex-col gap-4 md:flex-row md:gap-10">
+        <div className="w-full pb-8 md:w-1/2 lg:pb-0">
           <AnimatedText
             once
             text="Senior web developer with code & people skills."
@@ -49,7 +49,7 @@ const SubHeader = () => {
             }}
           />
         </div>
-        <div className="w-full md:ml-auto md:w-1/3 xl:max-w-[462px]">
+        <div className="w-full md:ml-auto md:w-1/2 xl:max-w-[462px]">
           <motion.div
             className="translate-x-0 bg-yellow-300 p-8 xl:mt-0.5"
             initial={{ opacity: 0, y: 15 }}
