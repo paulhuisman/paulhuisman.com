@@ -85,8 +85,10 @@ const SidebarOverlay = () => {
         {/* sidebar extended state */}
         <motion.div
           className={cn(
-            'text-off-white fixed inset-0 h-auto w-0 bg-gray-900 shadow-md lg:h-full',
-            { 'w-auto px-10 py-10 md:py-14 lg:py-14': isExtended },
+            'text-off-white absolute inset-0 h-auto w-0 overflow-y-scroll bg-gray-900 shadow-md lg:fixed lg:h-full',
+            {
+              'w-auto px-10 py-10 pb-20 md:py-14 lg:py-14 lg:pb-0': isExtended,
+            },
           )}
           animate={isExtended ? 'open' : 'closed'}
           variants={{
@@ -221,7 +223,7 @@ const SidebarOverlay = () => {
                       Part-time working as a front-end developer.
                     </p>
                   </li>
-                  <li className="mb-0">
+                  <li className="mb-12 lg:mb-4">
                     <h3 className="font-montserrat text-base font-bold uppercase">
                       BACHELOR OF INFORMATION AND COMMUNICATION TECHNOLOG
                     </h3>
