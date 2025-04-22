@@ -15,7 +15,6 @@ const More = () => {
         <div className="mb-8 flex w-full gap-8">
           <div className="mt-2 block h-5 w-20 flex-shrink-0 bg-black"></div>
           <div className="text-gray-900 lg:mr-16 xl:mr-32">
-            <div className="bg-green-custom mb-4 h-1 w-16"></div>
             <h3 className="mb-2 text-2xl font-bold">Github</h3>
             <p className="mb-4">
               Have a look at my open-source projects/contributions.
@@ -35,7 +34,6 @@ const More = () => {
         <div className="mb-8 flex w-full gap-8">
           <div className="mt-2 block h-5 w-20 flex-shrink-0 bg-black"></div>
           <div className="text-gray-900 lg:mr-16 xl:mr-32">
-            <div className="bg-green-custom mb-4 h-1 w-16"></div>
             <h3 className="mb-2 text-2xl font-bold">Photography</h3>
             <p className="mb-4">
               Everyone needs hobbies. I got quite a few, one of them is
