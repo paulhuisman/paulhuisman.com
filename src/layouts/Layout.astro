@@ -17,6 +17,11 @@ const { title, description } = Astro.props;
     <title>{title || 'Paul Huisman | Freelance Web Developer'}</title>
 
     <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content={description ||
+        'Freelance Web Developer with over 15 years experience specialized in Full Stack development'}
+    />
     <meta property="og:url" content="https://www.paulhuisman.com" />
     <meta property="og:type" content="article" />
     <meta
@@ -27,7 +32,7 @@ const { title, description } = Astro.props;
     <meta
       property="og:description"
       content={description ||
-        'Freelance Web Developer with over 10 years experience specialized in PHP backend development'}
+        'Freelance Web Developer with over 15 years experience specialized in Full Stack development'}
     />
     <meta property="og:image" content="/assets/images/fb_tag.png" />
     <meta name="twitter:card" content="summary" />
@@ -39,7 +44,7 @@ const { title, description } = Astro.props;
     <meta
       name="twitter:description"
       content={description ||
-        'Freelance Web Developer with over 10 years experience specialized in PHP backend development'}
+        'Freelance Web Developer with over 15 years experience specialized in Full Stack development'}
     />
     <meta name="twitter:image" content="/assets/images/fb_tag.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
