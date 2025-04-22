@@ -5,44 +5,27 @@ import SubHeader from '@/components/sections/SubHeader';
 import Footer from '@/components/sections/Footer.astro';
 import SidebarOverlay from '@/components/SidebarOverlay.tsx';
 import About from '@/components/sections/About';
-import Projects from '@/components/sections/Projects.astro';
-import More from '@/components/More.astro';
+import Projects from '@/components/sections/Projects';
+import More from '@/components/More';
+import { getCollection } from 'astro:content';
 
-// get about content
-// const about = await import('../content/about.md');
-// const aboutContent = about.frontmatter;
+// get all projects from the content collection
+const projects = await getCollection('projects');
 ---
 
 <script>
   import { animate } from 'motion';
   animate(
-    '[data-intro-title]',
-    { opacity: 1, translate: '0' },
-    { ease: 'easeIn', duration: 0.5, delay: 0.1 },
-  );
-  animate(
-    '[data-expertise-block]',
-    { opacity: 1, translate: '0' },
-    { ease: 'easeIn', duration: 0.3, delay: 0.6 },
-  );
-  animate(
     '[data-binary-title]',
-    { opacity: 1, translate: '0' },
-    { ease: 'easeIn', duration: 0.8, delay: 0.8 },
-  );
-  animate(
-    '[data-about-section]',
-    { opacity: 1, translate: '0' },
-    { ease: 'easeIn', duration: 1, delay: 1 },
+    { opacity: 1 },
+    { ease: 'easeIn', duration: 0.8, delay: 1.8 },
   );
 </script>
 <Layout title="Paul Huisman | Freelance Web Developer">
   <!-- Sidebar Overlay -->
   <SidebarOverlay client:load />
 
-  <div
-    class="w-[calc(100%-3rem)] bg-gray-100 text-black lg:w-[calc(100%-4rem)]"
-  >
+  <div class="w-[calc(100%)] bg-gray-100 text-black lg:w-[calc(100%-4rem)]">
     <!-- Header -->
     <Header client:load />
     <!-- Subheader -->
@@ -51,7 +34,7 @@ import More from '@/components/More.astro';
 
     <!-- Binary Section -->
     <section
-      class="overflow-hidden py-8 text-center opacity-0"
+      class="overflow-hidden px-16 py-8 text-center opacity-0 lg:px-24 lg:py-24"
       data-binary-title
     >
       <div
@@ -79,10 +62,11 @@ import More from '@/components/More.astro';
     <About client:load />
 
     <!-- Projects Section -->
-    <Projects />
+    <Projects projects={projects} client:load />
 
     <!-- More Section -->
-    <More />
+    <More client:load />
+
     <!-- Footer -->
     <Footer />
   </div>

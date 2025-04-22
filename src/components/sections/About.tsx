@@ -5,21 +5,16 @@ import { AnimatedText } from '../AnimatedText';
 import { useRef } from 'react';
 import Container from '../Container';
 
-interface AboutProps {
-  content?: string;
-  image?: string;
-}
-
-const About = ({ content, image }: AboutProps) => {
+const About = () => {
   return (
     <Container revealOnScroll margin="0px 0px -300px 0px">
-      <h2 className="font-montserrat mb-8 text-4xl font-bold xl:text-6xl">
+      <h2 className="font-montserrat mb-8 text-4xl font-bold xl:text-5xl">
         About
       </h2>
-      <div className="flex flex-col md:flex-row">
+      <div className="relative flex flex-col md:flex-row">
         <div className="mb-8 w-full md:mb-0 md:w-7/12">
-          <div className="grid grid-cols-1 gap-10 text-gray-900 md:mr-32 md:grid-cols-2">
-            <div className="leading-relaxed md:mr-12">
+          <div className="grid grid-cols-1 gap-y-8 text-gray-900 md:mr-32 md:gap-12 lg:grid-cols-2 lg:gap-y-0">
+            <div className="leading-relaxed md:mr-8">
               I've been working in web development since 2008, and I have a real
               passion for writing clean code and collaborating with others. One
               of my key strengths is taking a client's vision and turning it
@@ -28,7 +23,7 @@ const About = ({ content, image }: AboutProps) => {
               process and work together to create products that are truly
               user-centered.
             </div>
-            <div className="leading-relaxed md:mr-12">
+            <div className="leading-relaxed md:mr-8">
               When I first started out, I focused primarily on front-end
               development. While I enjoyed it, I craved a new challenge, so I
               switched over to back-end development. After several years, I

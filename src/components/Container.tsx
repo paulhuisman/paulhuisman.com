@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/util/cn';
-import React, { useId, useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 
 type ContainerProps = {
@@ -15,23 +15,26 @@ const Container = ({
   children,
   className,
   revealOnScroll = false,
-  margin = '',
+  margin = '0',
 }: ContainerProps) => {
-  const id = useId();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: margin });
+  const isInView = useInView(ref, {
+    once: true,
+    margin: margin,
+    amount: 'some',
+  });
 
   const baseClasses = cn(
-    'container mx-auto px-8 py-10 md:px-24 lg:px-36 md:py-16 xl:px-22 xl2:px-2',
+    'container mx-auto pl-16 pr-8 py-10 md:px-16 lg:px-36 md:py-16 xl:px-22 xl2:px-2',
     className,
   );
 
   if (revealOnScroll) {
     return (
       <motion.section
-        key={`section-${id}`}
+        key="bla"
         ref={ref}
-        className={cn(baseClasses, 'translate-y-4 opacity-0')}
+        className={baseClasses}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
         transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
