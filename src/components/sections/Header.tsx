@@ -159,7 +159,7 @@ const Header = () => {
                 className="group relative"
               >
                 <a
-                  href="/files/CV-PaulHuisman.pdf"
+                  href="/assets/cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download
