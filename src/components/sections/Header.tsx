@@ -91,7 +91,7 @@ const Header = () => {
             ></motion.div>
           </div>
 
-          <div className="font-inter z-10 mx-[4px] mb-8 flex w-full justify-between p-0 md:mb-0 md:block md:w-auto md:p-2">
+          <div className="font-inter z-10 mx-[4px] flex w-full justify-between md:block md:w-auto">
             <motion.div
               className="flex gap-2 align-middle"
               initial={{ opacity: 0, y: -10 }}
