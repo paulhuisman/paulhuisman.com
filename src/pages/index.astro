@@ -1,0 +1,73 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/sections/Header';
+import SubHeader from '@/components/sections/SubHeader';
+import Footer from '@/components/sections/Footer.astro';
+import SidebarOverlay from '@/components/SidebarOverlay.tsx';
+import About from '@/components/sections/About';
+import Projects from '@/components/sections/Projects';
+import More from '@/components/More';
+import { getCollection } from 'astro:content';
+
+// get all projects from the content collection
+const projects = await getCollection('projects');
+---
+
+<script>
+  import { animate } from 'motion';
+  animate(
+    '[data-binary-title]',
+    { opacity: 1 },
+    { ease: 'easeIn', duration: 0.8, delay: 1.8 },
+  );
+</script>
+<Layout title="Paul Huisman | Freelance Web Developer">
+  <!-- Sidebar Overlay -->
+  <SidebarOverlay client:load />
+
+  <div class="w-[calc(100%)] bg-gray-100 text-black lg:w-[calc(100%-4rem)]">
+    <!-- Header -->
+    <Header client:load />
+    <!-- Subheader -->
+
+    <SubHeader client:load />
+
+    <!-- Binary Section -->
+    <section
+      class="overflow-hidden px-16 py-8 text-center opacity-0 lg:px-24 lg:py-24"
+      data-binary-title
+    >
+      <div
+        class="font-roboto-mono flex flex-wrap justify-center text-xs text-gray-400"
+      >
+        <div class="mx-1">01110011</div>
+        <div class="mx-1">01100001</div>
+        <div class="mx-1">01110010</div>
+        <div class="mx-1">01100001</div>
+        <div class="mx-1">01101000</div>
+        <div class="mx-1">00100000</div>
+        <div class="mx-1">00111100</div>
+        <div class="mx-1">00110011</div>
+        <div class="mx-1">00100000</div>
+        <div class="mx-1">01110000</div>
+        <div class="mx-1">01100001</div>
+        <div class="mx-1">01110101</div>
+        <div class="mx-1">01101100</div>
+        <div class="mx-1">00001101</div>
+        <div class="mx-1">00001010</div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <About client:load />
+
+    <!-- Projects Section -->
+    <Projects projects={projects} client:load />
+
+    <!-- More Section -->
+    <More client:load />
+
+    <!-- Footer -->
+    <Footer />
+  </div>
+</Layout>
