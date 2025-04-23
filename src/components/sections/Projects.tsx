@@ -1,21 +1,24 @@
 'use client';
 
-import React from 'react';
 import Container from '@/components/Container';
 import ProjectCard from '@/components/ProjectCard';
 import { motion } from 'motion/react';
 
 type Project = {
-  title: string;
-  role: string;
-  period: string;
-  description: string;
-  url: string;
-  order: number;
+  data: {
+    title: string;
+    role: string;
+    period: string;
+    description: string;
+    url: string;
+    order: number;
+  };
 };
 
 const Projects = ({ projects }: { projects: Project[] }) => {
-  const sortedProjects = [...projects].sort((a, b) => a.order - b.order);
+  const sortedProjects = [...projects].sort(
+    (a, b) => a.data.order - b.data.order,
+  );
 
   return (
     <Container
@@ -33,7 +36,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
         variants={{
           visible: {
             transition: {
-              staggerChildren: 0.1,
+              staggerChildren: 0.15,
             },
           },
         }}

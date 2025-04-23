@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 type ProjectCardProps = {
   title: string;
   role: string;
