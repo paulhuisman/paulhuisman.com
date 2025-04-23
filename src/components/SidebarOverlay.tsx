@@ -179,7 +179,7 @@ const SidebarOverlay = () => {
                   // x: isExtended ? 0 : -20,
                 }}
                 transition={{ duration: 0.3, ease: 'easeIn', delay: 0.45 }}
-                className="mt-14 min-w-[80vw] lg:pl-32"
+                className="mt-14 min-w-[80vw] lg:min-w-[54vw] lg:pl-32"
               >
                 <h2 className="mb-14 text-xs tracking-wider uppercase">
                   curriculum vitae
