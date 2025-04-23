@@ -9,12 +9,12 @@ const Header = () => {
   const isClient = useIsClient();
 
   const cols = useBreakpointValue({
-    default: 20,
+    default: 18,
     lg: 29,
     xl: 32,
   });
   const rows = useBreakpointValue({
-    default: 7,
+    default: 10,
     lg: 10,
     xl: 9,
   });
@@ -52,7 +52,7 @@ const Header = () => {
 
   return (
     <header className="relative">
-      <div className="absolute top-0 z-0 grid w-full grid-cols-20 lg:grid-cols-29 xl:grid-cols-32">
+      <div className="absolute top-0 z-0 grid w-full grid-cols-18 lg:grid-cols-29 xl:grid-cols-32">
         {Array.from(Array(cols * rows)).map((_, i) => (
           <motion.div
             key={`tile-${i}`}
@@ -60,7 +60,7 @@ const Header = () => {
             variants={tileVariants}
             initial="hidden"
             animate="visible"
-            className="aspect-square border-[1px] border-gray-200/50"
+            className="aspect-square border-[1px] border-gray-200/70 lg:border-gray-200/60"
             whileHover={{
               scale: 1.7,
               backgroundColor: 'oklch(90.5% 0.182 98.111)',
@@ -72,8 +72,8 @@ const Header = () => {
         ))}
       </div>
 
-      <Container className="">
-        <div className="flex w-full flex-col-reverse justify-between transition-all md:flex-row">
+      <Container className="pt-6 pb-10">
+        <div className="flex w-full flex-col-reverse justify-between gap-8 transition-all md:flex-row lg:gap-0">
           <div className="z-10">
             <motion.h1
               className="block text-3xl font-bold text-black md:text-4xl"
@@ -118,9 +118,6 @@ const Header = () => {
             </motion.div>
             <motion.ul
               className="w-auto text-end text-sm text-black"
-              // initial={{ opacity: 0, y: -10 }}
-              // animate={{ opacity: 1, y: 0 }}
-              // transition={{ ease: 'easeIn', duration: 0.3, delay: 0.8 }}
               initial="hidden"
               animate="visible"
               variants={listVariants}

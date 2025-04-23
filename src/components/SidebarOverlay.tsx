@@ -149,7 +149,7 @@ const SidebarOverlay = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: isExtended ? 1 : 0 }}
-                transition={{ duration: 0.25, ease: 'easeIn', delay: 0.1 }}
+                transition={{ duration: 0.25, ease: 'easeIn', delay: 0.2 }}
                 className="min-w-[400px] border-white lg:border-l-10 lg:pl-30"
               >
                 <h1 className="text-3xl font-bold md:text-4xl">Paul Huisman</h1>
@@ -161,7 +161,7 @@ const SidebarOverlay = () => {
                   opacity: isExtended ? 1 : 0,
                   x: isExtended ? 0 : -20,
                 }}
-                transition={{ duration: 0.3, ease: 'easeIn', delay: 0.3 }}
+                transition={{ duration: 0.3, ease: 'easeIn', delay: 0.35 }}
                 className="mt-14 lg:pl-32"
               >
                 <h2 className="mb-14 text-xs tracking-wider uppercase">
