@@ -32,7 +32,6 @@ const Container = ({
   if (revealOnScroll) {
     return (
       <motion.section
-        key="bla"
         ref={ref}
         className={baseClasses}
         initial={{ opacity: 0, y: 20 }}
