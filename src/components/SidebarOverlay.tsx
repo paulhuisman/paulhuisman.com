@@ -3,7 +3,13 @@ import { AnimatePresence, motion } from 'motion/react';
 import { cn } from '@/util/cn';
 
 const SidebarOverlay = () => {
+  const [hasScroll, setHasScroll] = useState(false);
   const [isExtended, setIsExtended] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   // disable scroll when sidebar is extended
   useEffect(() => {
@@ -32,6 +38,11 @@ const SidebarOverlay = () => {
     };
   }, [isExtended]);
 
+  // close scroll when sidebar is closed
+  useEffect(() => {
+    if (!isExtended) setHasScroll(false);
+  }, [isExtended]);
+
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   return (
@@ -48,11 +59,16 @@ const SidebarOverlay = () => {
 
       {/* sidebar wrapper */}
       <motion.div
+        key="sidebar-wrapper"
         initial={{ translateX: '-100%' }}
         animate={{ translateX: 0 }}
-        transition={{ duration: 0.4, delay: 1.1, ease: 'easeIn' }}
+        transition={{
+          duration: 0.4,
+          delay: hasMounted ? 0 : 1.1,
+          ease: 'easeIn',
+        }}
         className={cn(
-          'fixed top-0 z-30 h-full w-8 bg-gray-900 transition-all duration-150 ease-in hover:pt-[2px] lg:w-14 hover:lg:w-15 xl:w-14',
+          'fixed top-0 z-30 h-dvh w-8 bg-gray-900 transition-all duration-150 ease-in hover:pt-[2px] lg:h-full lg:w-14 hover:lg:w-15 xl:w-14',
           {
             'cursor-pointer': !isExtended,
           },
@@ -85,18 +101,20 @@ const SidebarOverlay = () => {
         {/* sidebar extended state */}
         <motion.div
           className={cn(
-            'text-off-white absolute inset-0 h-auto w-0 bg-gray-900 shadow-md lg:fixed lg:h-full',
+            'text-off-white o absolute inset-0 h-auto w-0 bg-gray-900 shadow-md lg:fixed lg:h-full',
             {
-              'w-auto overflow-y-scroll px-10 py-10 pb-20 md:py-14 lg:overflow-y-hidden lg:py-14 lg:pb-0':
+              'w-auto overflow-x-hidden px-10 py-10 pb-20 md:py-14 lg:overflow-y-hidden lg:py-14 lg:pb-0':
                 isExtended,
+              'overflow-y-scroll': isExtended && hasScroll,
             },
           )}
+          onAnimationComplete={() => {
+            if (isExtended) setHasScroll(true);
+          }}
           animate={isExtended ? 'open' : 'closed'}
           variants={{
             closed: {
               width: '0rem',
-              rotateY: 0,
-              scale: 1,
               transition: {
                 duration: 0.6,
                 ease: [0.4, 0, 0.2, 1],
@@ -104,8 +122,6 @@ const SidebarOverlay = () => {
             },
             open: {
               width: isMobile ? '100vw' : '60vw',
-              rotateY: 0,
-              scale: 1,
               transition: {
                 duration: 0.8,
                 ease: [0.4, 0, 0.2, 1],
@@ -157,13 +173,13 @@ const SidebarOverlay = () => {
                 <div className="logo-bar mt-2 h-3 w-22 bg-yellow-300"></div>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0 }}
                 animate={{
                   opacity: isExtended ? 1 : 0,
-                  x: isExtended ? 0 : -20,
+                  // x: isExtended ? 0 : -20,
                 }}
-                transition={{ duration: 0.3, ease: 'easeIn', delay: 0.35 }}
-                className="mt-14 lg:pl-32"
+                transition={{ duration: 0.3, ease: 'easeIn', delay: 0.45 }}
+                className="mt-14 min-w-[80vw] lg:pl-32"
               >
                 <h2 className="mb-14 text-xs tracking-wider uppercase">
                   curriculum vitae
