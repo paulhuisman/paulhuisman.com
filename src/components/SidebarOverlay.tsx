@@ -121,7 +121,7 @@ const SidebarOverlay = () => {
               },
             },
             open: {
-              width: isMobile ? '100vw' : '60vw',
+              width: isMobile ? '100vw' : '63vw',
               transition: {
                 duration: 0.8,
                 ease: [0.4, 0, 0.2, 1],

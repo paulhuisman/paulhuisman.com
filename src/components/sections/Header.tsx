@@ -14,7 +14,7 @@ const Header = () => {
     xl: 32,
   });
   const rows = useBreakpointValue({
-    default: 10,
+    default: 14,
     lg: 10,
     xl: 9,
   });
