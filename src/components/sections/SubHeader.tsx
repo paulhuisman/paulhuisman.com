@@ -56,7 +56,7 @@ const SubHeader = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: 'easeIn', duration: 0.3, delay: 1 }}
           >
-            <h4 className="mb-4 text-base font-bold">
+            <h4 className="font-montserrat mb-4 text-base font-bold">
               EXPERIENCE{' '}
               <span className="inline-block pl-1 text-xs font-normal italic">
                 (15+ years)
