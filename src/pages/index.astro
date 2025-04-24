@@ -18,7 +18,9 @@ const projects = await getCollection('projects');
   <!-- Sidebar Overlay -->
   <SidebarOverlay client:load />
 
-  <div class="w-full bg-gray-100 text-black lg:pl-14">
+  <div
+    class="w-100vw max-w-100vw lg:max-w-auto overflow-x-hidden bg-gray-100 text-black lg:w-auto lg:overflow-x-auto lg:pl-14"
+  >
     <!-- Header -->
     <Header client:load />
     <!-- Subheader -->
