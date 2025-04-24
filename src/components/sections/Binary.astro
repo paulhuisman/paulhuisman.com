@@ -1,0 +1,36 @@
+---
+// Binary.astro
+---
+
+<script>
+  import { animate } from 'motion';
+  animate(
+    '[data-binary-title]',
+    { opacity: 1 },
+    { ease: 'easeIn', duration: 0.8, delay: 1.8 },
+  );
+</script>
+<section
+  class="overflow-hidden px-16 py-8 text-center opacity-0 lg:px-24 lg:py-24"
+  data-binary-title
+>
+  <div
+    class="font-roboto-mono flex flex-wrap justify-center gap-3 text-xs text-gray-400"
+  >
+    <div>01110011</div>
+    <div>01100001</div>
+    <div>01110010</div>
+    <div>01100001</div>
+    <div>01101000</div>
+    <div>00100000</div>
+    <div>00111100</div>
+    <div>00110011</div>
+    <div>00100000</div>
+    <div>01110000</div>
+    <div>01100001</div>
+    <div>01110101</div>
+    <div>01101100</div>
+    <div>00001101</div>
+    <div>00001010</div>
+  </div>
+</section>
