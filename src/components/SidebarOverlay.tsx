@@ -101,7 +101,7 @@ const SidebarOverlay = () => {
         {/* sidebar extended state */}
         <motion.div
           className={cn(
-            'text-off-white o absolute inset-0 h-auto w-0 bg-gray-900 shadow-md lg:fixed lg:h-full',
+            'text-off-white absolute inset-0 h-auto w-0 overflow-y-hidden bg-gray-900 shadow-md lg:fixed lg:h-full',
             {
               'w-auto overflow-x-hidden px-10 py-10 pb-20 md:py-14 lg:overflow-y-hidden lg:py-14 lg:pb-0':
                 isExtended,
@@ -109,12 +109,14 @@ const SidebarOverlay = () => {
             },
           )}
           onAnimationComplete={() => {
-            if (isExtended) setHasScroll(true);
+            if (isExtended) {
+              setTimeout(() => setHasScroll(true), 50);
+            }
           }}
           animate={isExtended ? 'open' : 'closed'}
           variants={{
             closed: {
-              width: '0rem',
+              width: '0',
               transition: {
                 duration: 0.6,
                 ease: [0.4, 0, 0.2, 1],
@@ -139,7 +141,7 @@ const SidebarOverlay = () => {
               <motion.button
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.25, ease: 'easeIn', delay: 0.5 }}
+                transition={{ duration: 0.25, ease: 'easeIn', delay: 0.4 }}
                 className="group pointer-events-auto absolute top-5 right-5 z-50 cursor-pointer transition-all duration-200 hover:rounded-full hover:bg-amber-50"
                 aria-label="Close Sidebar"
                 onClick={(e) => {
@@ -178,7 +180,7 @@ const SidebarOverlay = () => {
                   opacity: isExtended ? 1 : 0,
                   // x: isExtended ? 0 : -20,
                 }}
-                transition={{ duration: 0.3, ease: 'easeIn', delay: 0.45 }}
+                transition={{ duration: 0.3, ease: 'easeIn', delay: 0.35 }}
                 className="mt-14 min-w-[80vw] lg:min-w-[54vw] lg:pl-32"
               >
                 <h2 className="mb-14 text-xs tracking-wider uppercase">
