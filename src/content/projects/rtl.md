@@ -2,7 +2,7 @@
 title: 'RTL'
 role: 'Freelance Developer'
 period: 'Apr 2023 - Mar 2025'
-description: 'Developing a custom made order dashboard for AUrate to share insights in the open production orders. Calculating estimated time left based on the several production centres. Full-stack development, using Laravel and VueJS.'
+description: 'Frontend development and UX/UI for RTL & Ad Alliance\'s new client portal application. Clients can manage all their advertising solutions in one portal and get insights on their running campaigns. Build using React, NextJS, TypeScript and Tailwind.'
 url: ''
 isInternalApp: true
 order: 1
