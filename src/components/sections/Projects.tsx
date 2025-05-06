@@ -12,6 +12,7 @@ type Project = {
     description: string;
     url: string;
     order: number;
+    images: string[];
   };
 };
 
@@ -30,7 +31,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
         Projects
       </h2>
       <motion.div
-        className="grid grid-cols-1 gap-8 gap-y-12 md:grid-cols-2"
+        className="grid grid-cols-1 items-stretch gap-8 gap-y-10 md:grid-cols-2"
         initial="hidden"
         animate="visible"
         variants={{
@@ -57,6 +58,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
               period={project.data.period}
               description={project.data.description}
               url={project.data.url}
+              images={project.data.images}
             />
           </motion.div>
         ))}

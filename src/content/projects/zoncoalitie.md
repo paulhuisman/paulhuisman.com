@@ -6,4 +6,7 @@ description: 'Developing a independent solar power projects platform for Zoncoal
 url: ''
 isInternalApp: true
 order: 4
+images:
+  - /assets/work/zoncoalitie/01.png
+  - /assets/work/zoncoalitie/02.png
 ---

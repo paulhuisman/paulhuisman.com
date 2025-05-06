@@ -9,6 +9,7 @@ const projectsCollection = defineCollection({
     url: z.string().optional(),
     isInternalApp: z.boolean().optional(),
     order: z.number(),
+    images: z.string().array().optional(),
   }),
 });
 
