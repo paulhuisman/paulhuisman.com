@@ -156,7 +156,7 @@ const Header = () => {
                 className="group relative"
               >
                 <a
-                  href="/assets/cv.pdf"
+                  href="/assets/cv-paulhuisman.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download
