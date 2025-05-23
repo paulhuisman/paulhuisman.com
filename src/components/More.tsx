@@ -5,7 +5,7 @@ const More = () => {
     <Container
       className="mt-20 lg:mt-30"
       margin="0px 0px -50px 0px"
-      revealOnScroll
+      // revealOnScroll
     >
       <h2 className="font-montserrat mb-8 text-4xl font-bold xl:text-5xl">
         More
