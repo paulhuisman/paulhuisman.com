@@ -25,7 +25,7 @@ const Container = ({
   });
 
   const baseClasses = cn(
-    'container mx-auto pl-14 pr-6 py-10 md:px-4 lg:px-8 md:py-16 xl:px-18 xl2:px-2',
+    'container mx-auto pl-14 pr-6 py-10 md:pl-14 md:min-w-64 md:pr-8 lg:px-8 md:py-16 xl:px-18 xl2:px-2',
     className,
   );
 
