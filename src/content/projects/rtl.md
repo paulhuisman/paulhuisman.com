@@ -1,6 +1,6 @@
 ---
 title: 'RTL'
-role: 'Freelance Frontend E'
+role: 'Freelance Frontend Engineer'
 period: 'Apr 2023 - Mar 2025'
 description: "Frontend development and UX/UI for RTL & Ad Alliance's new client portal application. Clients can manage all their advertising solutions in one portal and get insights on their running campaigns. Build using React, NextJS, TypeScript and Tailwind."
 url: ''
