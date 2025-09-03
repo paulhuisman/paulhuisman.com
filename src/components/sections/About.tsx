@@ -64,7 +64,7 @@ const About = () => {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
         >
           <img
-            src="/assets/paul.jpg"
+            src="/assets/paul2.jpg"
             alt="Paul Huisman"
             className="h-auto w-full"
           />
