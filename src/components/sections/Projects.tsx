@@ -24,7 +24,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
   return (
     <Container
       className="mt-20 lg:mt-48 lg:pr-0"
-      margin="0px 0px -100px 0px"
+      margin="0px 0px -280px 0px"
       revealOnScroll
     >
       <h2 className="font-montserrat mb-10 text-4xl font-bold xl:text-5xl">
@@ -37,7 +37,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
         variants={{
           visible: {
             transition: {
-              staggerChildren: 0.15,
+              staggerChildren: 0.35,
             },
           },
         }}
