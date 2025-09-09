@@ -2,7 +2,9 @@
 title: 'RTL'
 role: 'Freelance Frontend Engineer'
 period: 'Apr 2023 - Mar 2025'
-description: "Frontend development and UX/UI for RTL & Ad Alliance's new client portal application. Clients can manage all their advertising solutions in one portal and get insights on their running campaigns. Build using React, NextJS, TypeScript and Tailwind."
+description: |
+  As the sole frontend engineer, I built a new client portal from scratch using React, Next.js, TypeScript, and Vite, enabling customers to purchase products and gain insights into their display and video campaigns. I designed reusable components and an intuitive interface, ensuring accessibility according to WCAG guidelines.
+  Working closely with product managers, I translated business requirements into user-friendly features. The result is a scalable, sleek, and effective platform that significantly increased customer engagement and satisfaction.
 url: ''
 isInternalApp: true
 order: 1
