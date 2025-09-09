@@ -41,7 +41,7 @@ const ProjectCard = ({
           {role} | {period}
         </h4>
 
-        <p className="mb-5">{description}</p>
+        <p className="mb-5" dangerouslySetInnerHTML={{ __html: description }} />
 
         {url ? (
           <a
