@@ -91,19 +91,19 @@ const Header = () => {
             ></motion.div>
           </div>
 
-          <div className="font-inter z-10 mx-[4px] flex w-full justify-between md:block md:w-auto">
+          <div className="font-inter z-10 flex w-full justify-between md:block md:w-auto">
             <motion.div
-              className="flex gap-2 align-middle"
+              className="align-middl flex gap-2"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ease: 'easeIn', duration: 0.25, delay: 0.5 }}
             >
-              <div className="group hidden size-7 justify-center rounded-full bg-yellow-300 pt-[5px] align-middle shadow-md md:flex">
+              <div className="group flex size-5 justify-center rounded-full bg-red-500 pt-[5px] align-middle shadow-md">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  className="size-[18px] stroke-gray-900 stroke-[1.5]"
+                  className="size-[14px] stroke-gray-900 stroke-[1.5]"
                 >
                   <path
                     strokeLinecap="round"
@@ -112,11 +112,11 @@ const Header = () => {
                   />
                 </svg>
               </div>
-              <h4 className="mb-2.5 text-sm font-bold text-black lg:text-base">
-                GET IN TOUCH
+              <h4 className="lg:text-md mb-2.5 text-sm font-bold text-black lg:text-right">
+                CURRENTLY UNAVAILABLE
               </h4>
             </motion.div>
-            <motion.ul
+            {/* <motion.ul
               className="w-auto text-end text-sm text-black"
               initial="hidden"
               animate="visible"
@@ -166,7 +166,7 @@ const Header = () => {
                   <span className="absolute -bottom-[1px] left-0 h-[3px] w-0 bg-black transition-all duration-300 ease-in group-hover:w-full"></span>
                 </a>
               </motion.li>
-            </motion.ul>
+            </motion.ul> */}
           </div>
         </div>
       </Container>
