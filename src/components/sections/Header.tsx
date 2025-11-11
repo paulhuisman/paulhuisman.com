@@ -92,7 +92,7 @@ const Header = () => {
           </div>
 
           <div className="font-inter z-10 flex w-full justify-between md:block md:w-auto">
-            <motion.div
+           {/* <motion.div
               className="align-middl flex gap-2"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -112,10 +112,10 @@ const Header = () => {
                   />
                 </svg>
               </div>
-              {/*<h4 className="lg:text-md mb-2.5 text-sm font-bold text-black lg:text-right">
+              <h4 className="lg:text-md mb-2.5 text-sm font-bold text-black lg:text-right">
                 CURRENTLY UNAVAILABLE
-              </h4>*/}
-            </motion.div>
+              </h4>
+            </motion.div>*/}
             {/* <motion.ul
               className="w-auto text-end text-sm text-black"
               initial="hidden"
