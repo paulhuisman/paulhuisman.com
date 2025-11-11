@@ -112,9 +112,9 @@ const Header = () => {
                   />
                 </svg>
               </div>
-              <h4 className="lg:text-md mb-2.5 text-sm font-bold text-black lg:text-right">
+              {/*<h4 className="lg:text-md mb-2.5 text-sm font-bold text-black lg:text-right">
                 CURRENTLY UNAVAILABLE
-              </h4>
+              </h4>*/}
             </motion.div>
             {/* <motion.ul
               className="w-auto text-end text-sm text-black"
