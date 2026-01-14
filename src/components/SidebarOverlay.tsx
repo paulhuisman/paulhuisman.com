@@ -87,7 +87,10 @@ const SidebarOverlay = () => {
               <div className="animate-pulser size-3.5 rounded-full bg-yellow-300 lg:size-5"></div>
             </li>
             <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-10 lg:h-auto lg:text-wrap">
-              Freelance - &apos;19 - NOW
+              Digizorg - NOW
+            </li>
+            <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-10 lg:h-auto lg:text-wrap">
+              Freelance - &apos;19 - &apos;25
             </li>
             <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-10 lg:h-auto lg:text-wrap">
               Dept Agency - &apos;17-&apos;18
