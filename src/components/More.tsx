@@ -3,7 +3,7 @@ import Container from './Container';
 const More = () => {
   return (
     <Container
-      className="mt-20 lg:mt-30"
+      className="mt-8 lg:mt-30"
       margin="0px 0px -50px 0px"
       // revealOnScroll
     >
@@ -13,7 +13,7 @@ const More = () => {
       <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2">
         {/* GitHub Section */}
         <div className="mb-8 flex w-full gap-8">
-          <div className="mt-2 block h-5 w-20 flex-shrink-0 bg-black"></div>
+          <div className="mt-2 hidden h-5 w-20 flex-shrink-0 bg-black md:block"></div>
           <div className="text-gray-900 lg:mr-16 xl:mr-32">
             <h3 className="font-montserrat mb-3 text-3xl font-bold">Github</h3>
             <p className="mb-5">
@@ -32,7 +32,7 @@ const More = () => {
 
         {/* Photography Section */}
         <div className="mb-8 flex w-full gap-8">
-          <div className="mt-2 block h-5 w-20 flex-shrink-0 bg-black"></div>
+          <div className="mt-2 hidden h-5 w-20 flex-shrink-0 bg-black md:block"></div>
           <div className="text-gray-900 lg:mr-16 xl:mr-32">
             <h3 className="font-montserrat mb-3 text-3xl font-bold">
               Photography
