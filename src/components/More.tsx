@@ -23,7 +23,7 @@ const More = () => {
               href="https://github.com/paulhuisman"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-montserrat text-off-white rounded-md bg-gray-900 px-4 py-2 text-sm font-bold hover:underline"
+              className="font-montserrat text-off-white rounded-md bg-gray-900 px-4 py-2 text-sm font-bold transition-all ease-in hover:bg-gray-700"
             >
               View the work
             </a>
