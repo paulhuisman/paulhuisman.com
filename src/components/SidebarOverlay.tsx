@@ -189,7 +189,7 @@ const SidebarOverlay = () => {
                 <h2 className="mb-14 text-xs tracking-wider uppercase">
                   curriculum vitae
                 </h2>
-                <ul className="mr-6 grid gap-x-0 gap-y-8 md:mr-4 md:mb-12 md:grid-cols-2 md:gap-x-10 md:gap-y-8 lg:gap-y-12">
+                <ul className="grid gap-x-0 gap-y-8 md:mr-4 md:mr-6 md:mb-12 md:grid-cols-2 md:gap-x-10 md:gap-y-8 lg:gap-y-12">
                   <li className="lg:max-w-[400px]">
                     <h3 className="font-montserrat text-base font-bold uppercase">
                       Freelance Frontend Engineer
