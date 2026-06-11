@@ -121,14 +121,14 @@ const SidebarOverlay = () => {
             closed: {
               width: '0',
               transition: {
-                duration: 0.6,
+                duration: 0.35,
                 ease: [0.4, 0, 0.2, 1],
               },
             },
             open: {
               width: isMobile ? '100vw' : '63vw',
               transition: {
-                duration: 0.8,
+                duration: 0.45,
                 ease: [0.4, 0, 0.2, 1],
               },
             },
@@ -144,7 +144,7 @@ const SidebarOverlay = () => {
               <motion.button
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.25, ease: 'easeIn', delay: 0.4 }}
+                transition={{ duration: 0.2, ease: 'easeIn', delay: 0.25 }}
                 className="group pointer-events-auto absolute top-5 right-5 z-50 cursor-pointer transition-all duration-200 hover:rounded-full hover:bg-amber-50"
                 aria-label="Close Sidebar"
                 onClick={(e) => {
@@ -171,7 +171,7 @@ const SidebarOverlay = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: isExtended ? 1 : 0 }}
-                transition={{ duration: 0.25, ease: 'easeIn', delay: 0.2 }}
+                transition={{ duration: 0.2, ease: 'easeIn', delay: 0.12 }}
                 className="min-w-[400px] border-white lg:border-l-10 lg:pl-30"
               >
                 <h1 className="text-3xl font-bold md:text-4xl">Paul Huisman</h1>
@@ -183,7 +183,7 @@ const SidebarOverlay = () => {
                   opacity: isExtended ? 1 : 0,
                   // x: isExtended ? 0 : -20,
                 }}
-                transition={{ duration: 0.3, ease: 'easeIn', delay: 0.35 }}
+                transition={{ duration: 0.2, ease: 'easeIn', delay: 0.2 }}
                 className="mt-14 min-w-[80vw] lg:min-w-[54vw] lg:pl-32"
               >
                 <h2 className="mb-14 text-xs tracking-wider uppercase">
