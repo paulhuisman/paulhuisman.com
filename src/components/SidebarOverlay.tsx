@@ -64,11 +64,11 @@ const SidebarOverlay = () => {
         animate={{ translateX: 0 }}
         transition={{
           duration: 0.4,
-          delay: hasMounted ? 0 : 1.1,
+          delay: hasMounted ? 0 : 0.5,
           ease: 'easeIn',
         }}
         className={cn(
-          'fixed top-0 z-30 h-dvh w-8 bg-gray-900 transition-all duration-150 ease-in hover:pt-[2px] lg:h-full lg:w-14 hover:lg:w-15 xl:w-14',
+          'relative z-30 w-8 shrink-0 self-stretch bg-gray-900 transition-all duration-150 ease-in hover:pt-[2px] lg:w-14 hover:lg:w-15 xl:w-14',
           {
             'cursor-pointer': !isExtended,
           },
@@ -104,9 +104,9 @@ const SidebarOverlay = () => {
         {/* sidebar extended state */}
         <motion.div
           className={cn(
-            'text-off-white absolute inset-0 h-auto w-0 overflow-y-hidden bg-gray-900 shadow-md lg:fixed lg:h-full',
+            'sidebar-scroll text-off-white fixed inset-x-0 top-0 h-dvh w-0 overflow-y-hidden bg-gray-900 shadow-md',
             {
-              'w-auto overflow-x-hidden px-10 py-10 pb-20 md:py-14 lg:overflow-y-hidden lg:py-14 lg:pb-0':
+              'w-auto overflow-x-hidden px-10 py-10 pb-20 md:py-14 lg:overflow-y-auto lg:py-14 lg:pb-0':
                 isExtended,
               'overflow-y-scroll': isExtended && hasScroll,
             },
@@ -183,13 +183,13 @@ const SidebarOverlay = () => {
                   opacity: isExtended ? 1 : 0,
                   // x: isExtended ? 0 : -20,
                 }}
-                transition={{ duration: 0.2, ease: 'easeIn', delay: 0.2 }}
+                transition={{ duration: 0.2, ease: 'easeIn', delay: 0.15 }}
                 className="mt-14 min-w-[80vw] lg:min-w-[54vw] lg:pl-32"
               >
                 <h2 className="mb-14 text-xs tracking-wider uppercase">
                   curriculum vitae
                 </h2>
-                <ul className="mr-6 grid gap-x-0 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-y-24">
+                <ul className="mr-6 grid gap-x-0 gap-y-8 md:mr-4 md:mb-12 md:grid-cols-2 md:gap-x-10 md:gap-y-8 lg:gap-y-12">
                   <li className="lg:max-w-[400px]">
                     <h3 className="font-montserrat text-base font-bold uppercase">
                       Freelance Frontend Engineer

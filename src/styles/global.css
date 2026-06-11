@@ -40,6 +40,21 @@ body {
     );
 }
 
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
+}
+.sidebar-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 9999px;
+}
+
 @media (max-width: 640px) {
   [data-header-background] {
     background-image:
