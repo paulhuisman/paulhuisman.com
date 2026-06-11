@@ -82,9 +82,9 @@ const SidebarOverlay = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, ease: 'easeIn' }}
         >
-          <ul className="mt-41 flex h-5 w-screen items-center justify-start text-xs text-white transition-all duration-300 md:mt-30 md:text-sm lg:mt-40 lg:h-auto">
+          <ul className="mt-48 flex h-5 w-screen items-center justify-start text-xs text-white transition-all duration-300 md:mt-30 md:text-sm lg:mt-50 lg:h-auto">
             <li>
-              <div className="animate-pulser size-3.5 rounded-full bg-yellow-300 lg:size-5"></div>
+              <div className="animate-pulser mr-8 size-3.5 rounded-full bg-yellow-300 lg:size-5"></div>
             </li>
             <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-10 lg:h-auto lg:text-wrap">
               Digizorg - NOW

@@ -18,7 +18,7 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
       },
       animation: {
-        pulser: 'pulser 2s infinite',
+        pulser: 'pulser 1.4s infinite',
         wiggle: 'wiggle 1s ease-in-out infinite',
       },
       keyframes: {
