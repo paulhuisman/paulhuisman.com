@@ -149,7 +149,7 @@ const SidebarOverlay = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.2, ease: 'easeIn', delay: 0.25 }}
-                className="group pointer-events-auto absolute top-5 right-5 z-50 cursor-pointer transition-all duration-200 hover:rounded-full hover:bg-amber-50"
+                className="group/close pointer-events-auto absolute top-5 right-5 z-50 cursor-pointer transition-all duration-200 hover:rounded-full hover:bg-amber-50"
                 aria-label="Close Sidebar"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -162,7 +162,7 @@ const SidebarOverlay = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="size-10 stroke-white transition-all duration-200 group-hover:stroke-gray-900"
+                  className="size-10 stroke-white transition-all duration-200 group-hover/close:stroke-gray-900"
                 >
                   <path
                     strokeLinecap="round"
