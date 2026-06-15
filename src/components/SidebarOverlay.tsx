@@ -51,8 +51,8 @@ const SidebarOverlay = () => {
 
       <div
         className={cn(
-          'fixed inset-0 z-20 hidden bg-black opacity-0 transition-all duration-300',
-          { 'block opacity-60': isExtended },
+          'fixed inset-0 z-20 bg-black opacity-0 transition-all duration-300 pointer-events-none',
+          { 'opacity-60 pointer-events-auto': isExtended },
         )}
         onClick={() => setIsExtended(false)}
       ></div>
