@@ -68,13 +68,18 @@ const SidebarOverlay = () => {
           ease: 'easeIn',
         }}
         className={cn(
-          'relative z-30 w-8 shrink-0 self-stretch bg-gray-900 transition-all duration-150 ease-in hover:pt-[2px] lg:w-14 hover:lg:w-15 xl:w-14',
+          'group relative z-30 w-8 shrink-0 self-stretch bg-gray-900 transition-colors duration-300 ease-in hover:bg-gray-800 xl:w-14 lg:w-14',
           {
             'cursor-pointer': !isExtended,
           },
         )}
         onClick={() => setIsExtended(true)}
       >
+        {/* hover accent line */}
+        {!isExtended && (
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-[3px] bg-yellow-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        )}
+
         {/* sidebar closed state */}
         <motion.div
           className={cn('rotate-90 transform transition-all duration-300')}
@@ -137,7 +142,6 @@ const SidebarOverlay = () => {
             transformOrigin: 'left center',
             perspective: 1000,
           }}
-          whileHover={!isExtended ? { scale: 1.05, rotateY: 5 } : {}}
         >
           {isExtended && (
             <>
