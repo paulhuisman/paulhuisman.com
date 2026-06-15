@@ -192,9 +192,18 @@ const SidebarOverlay = () => {
                 <ul className="grid gap-x-0 gap-y-8 md:mr-4 md:mr-6 md:mb-12 md:grid-cols-2 md:gap-x-10 md:gap-y-8 lg:gap-y-12">
                   <li className="lg:max-w-[400px]">
                     <h3 className="font-montserrat text-base font-bold uppercase">
+                      Frontend Engineer at Digizorg
+                    </h3>
+                    <div className="mb-2 text-xs italic">2025 - NOW</div>
+                    <p className="font-inter text-sm text-gray-400 italic">
+                      Frontend development for Digizorg, part of Erasmus MC. Digizorg connects EPDs, HIS systems and digital healthcare solutions into one unified platform — patients and care providers always share the same overview.
+                    </p>
+                  </li>
+                  <li className="lg:max-w-[400px]">
+                    <h3 className="font-montserrat text-base font-bold uppercase">
                       Freelance Frontend Engineer
                     </h3>
-                    <div className="mb-2 text-xs italic">2019 - NOW</div>
+                    <div className="mb-2 text-xs italic">2019 - 2025</div>
                     <p className="font-inter text-sm text-gray-400 italic">
                       Building beautiful frontend applications where the user is
                       at the center of attention, developing projects for RTL,
