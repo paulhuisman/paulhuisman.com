@@ -2,10 +2,27 @@
 
 import { motion, useInView } from 'motion/react';
 import { AnimatedText } from '../AnimatedText';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Container from '../Container';
 
 const About = () => {
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    if (window.scrollY > 0) {
+      setHasScrolled(true);
+      return;
+    }
+    const onScroll = () => {
+      if (window.scrollY > 0) {
+        setHasScrolled(true);
+        window.removeEventListener('scroll', onScroll);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   const elementRef = useRef(null);
   const margin = '0px 0px -300px 0px';
   const isInView = useInView(elementRef, {
@@ -13,12 +30,14 @@ const About = () => {
     margin,
   });
 
+  const reveal = hasScrolled && isInView;
+
   return (
-    <Container revealOnScroll margin={margin}>
+    <Container revealOnScroll={false} margin={margin}>
       <motion.h2
         className="font-montserrat mb-8 text-4xl font-bold xl:text-5xl"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={{ opacity: reveal ? 1 : 0 }}
       >
         About
       </motion.h2>
@@ -28,7 +47,7 @@ const About = () => {
             <motion.div
               className="leading-relaxed md:mr-8"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+              animate={{ opacity: reveal ? 1 : 0, y: reveal ? 0 : 30 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
               I've been working in web development since 2008, and I have a real
@@ -42,7 +61,7 @@ const About = () => {
             <motion.div
               className="leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+              animate={{ opacity: reveal ? 1 : 0, y: reveal ? 0 : 30 }}
               transition={{ duration: 0.4, delay: 0.35 }}
             >
               When I first started out, I focused primarily on front-end
@@ -60,13 +79,13 @@ const About = () => {
         <motion.div
           className="top-0 right-0 w-full md:absolute md:max-w-[400px]"
           initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 50 }}
+          animate={{ opacity: reveal ? 1 : 0, x: reveal ? 0 : 50 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
         >
           <img
-            src="/assets/paul2.jpg"
+            src="/assets/paul.jpg"
             alt="Paul Huisman"
-            className="h-auto w-full"
+            className="h-auto w-full md:max-w-[300px]"
           />
         </motion.div>
       </div>
