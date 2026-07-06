@@ -77,7 +77,7 @@ const About = () => {
           </div>
         </div>
         <motion.div
-          className="top-0 right-0 w-full md:absolute md:max-w-[400px]"
+          className="top-0 right-0 mx-auto w-full max-w-[50vw] md:absolute md:mx-0 md:max-w-[300px] lg:max-w-[400px]"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: reveal ? 1 : 0, x: reveal ? 0 : 50 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
@@ -85,7 +85,7 @@ const About = () => {
           <img
             src="/assets/paul.jpg"
             alt="Paul Huisman"
-            className="h-auto w-full md:max-w-[300px]"
+            className="mx-auto h-auto w-full"
           />
         </motion.div>
       </div>
