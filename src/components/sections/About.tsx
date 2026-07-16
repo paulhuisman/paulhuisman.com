@@ -43,7 +43,7 @@ const About = () => {
       </motion.h2>
       <div className="relative flex flex-col md:flex-row" ref={elementRef}>
         <div className="mb-8 w-full md:mb-0 md:w-8/12">
-          <div className="grid grid-cols-1 gap-y-8 text-sm text-gray-900 md:mr-24 md:gap-12 lg:grid-cols-2 lg:gap-y-0">
+          <div className="grid grid-cols-1 gap-y-8 text-gray-900 md:mr-24 md:gap-12 lg:grid-cols-2 lg:gap-y-0">
             <motion.div
               className="leading-relaxed md:mr-8"
               initial={{ opacity: 0, y: 30 }}
