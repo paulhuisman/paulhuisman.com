@@ -51,8 +51,8 @@ const SidebarOverlay = () => {
 
       <div
         className={cn(
-          'fixed inset-0 z-20 bg-black opacity-0 transition-all duration-300 pointer-events-none',
-          { 'opacity-60 pointer-events-auto': isExtended },
+          'pointer-events-none fixed inset-0 z-20 bg-black opacity-0 transition-all duration-300',
+          { 'pointer-events-auto opacity-60': isExtended },
         )}
         onClick={() => setIsExtended(false)}
       ></div>
@@ -68,7 +68,7 @@ const SidebarOverlay = () => {
           ease: 'easeIn',
         }}
         className={cn(
-          'group relative z-30 w-8 shrink-0 self-stretch bg-gray-900 transition-colors duration-300 ease-in hover:bg-gray-800 xl:w-14 lg:w-14',
+          'group relative z-30 w-8 shrink-0 self-stretch bg-gray-900 transition-colors duration-300 ease-in hover:bg-gray-800 lg:w-14 xl:w-14',
           {
             'cursor-pointer': !isExtended,
           },
@@ -92,16 +92,16 @@ const SidebarOverlay = () => {
               <div className="animate-pulser mr-8 size-3.5 rounded-full bg-yellow-300 lg:size-5"></div>
             </li>
             <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-10 lg:h-auto lg:text-wrap">
-              Digizorg - NOW
+              Digizorg - &apos;25 - NOW
             </li>
             <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-10 lg:h-auto lg:text-wrap">
               Freelance - &apos;19 - &apos;25
             </li>
             <li className="mr-8 ml-8 h-4 tracking-wider text-nowrap lg:mr-10 lg:h-auto lg:text-wrap">
-              Dept Agency - &apos;17-&apos;18
+              Dept Agency - &apos;17 - &apos;18
             </li>
             <li className="ml-8 h-4 tracking-wider text-nowrap lg:ml-10 lg:h-auto lg:text-wrap">
-              Hoppinger - &apos;10-&apos;17
+              Hoppinger - &apos;10 - &apos;17
             </li>
           </ul>
         </motion.div>
@@ -200,7 +200,10 @@ const SidebarOverlay = () => {
                     </h3>
                     <div className="mb-2 text-xs italic">2025 - NOW</div>
                     <p className="font-inter text-sm text-gray-400 italic">
-                      Frontend development for Digizorg, part of Erasmus MC. Digizorg connects EPDs, HIS systems and digital healthcare solutions into one unified platform — patients and care providers always share the same overview.
+                      Frontend development for Digizorg, part of Erasmus MC.
+                      Digizorg connects EPDs, HIS systems and digital healthcare
+                      solutions into one unified platform — patients and care
+                      providers always share the same overview.
                     </p>
                   </li>
                   <li className="lg:max-w-[400px]">
@@ -260,7 +263,7 @@ const SidebarOverlay = () => {
                   </li>
                   <li className="mb-12 lg:mb-4">
                     <h3 className="font-montserrat text-base font-bold uppercase">
-                      BACHELOR OF INFORMATION AND COMMUNICATION TECHNOLOG
+                      BACHELOR OF INFORMATION AND COMMUNICATION TECHNOLOGY
                     </h3>
                     <div className="mb-2 text-xs italic">2005 - 2010</div>
                     <p className="font-inter text-sm text-gray-400 italic">
