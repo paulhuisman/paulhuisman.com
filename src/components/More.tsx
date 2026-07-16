@@ -16,7 +16,7 @@ const More = () => {
           <div className="mt-2 hidden h-5 w-20 flex-shrink-0 bg-black md:block"></div>
           <div className="text-gray-900 lg:mr-16 xl:mr-32">
             <h3 className="font-montserrat mb-3 text-3xl font-bold">Github</h3>
-            <p className="mb-5">
+            <p className="mb-5 text-sm">
               Have a look at my open-source projects/contributions.
             </p>
             <a
@@ -37,7 +37,7 @@ const More = () => {
             <h3 className="font-montserrat mb-3 text-3xl font-bold">
               Photography
             </h3>
-            <p className="mb-5">
+            <p className="mb-5 text-sm">
               Everyone needs hobbies. I got quite a few, one of them is
               photography.
             </p>
